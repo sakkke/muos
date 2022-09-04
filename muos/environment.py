@@ -2,6 +2,7 @@ from pyfzf import FzfPrompt
 from .fzf_manager import FzfManager
 
 class Environment:
+    disk: str
     fzf: FzfPrompt
 
     def __init__(self) -> None:
