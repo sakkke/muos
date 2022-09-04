@@ -1,4 +1,5 @@
 from typing import List
+from .color import Color
 from .step import Step
 
 class Runner:
@@ -7,6 +8,6 @@ class Runner:
 
     def run(self) -> None:
         for step in self.steps:
-            print('run: {}'.format(step.name))
+            print('{}[run] {}{}'.format(Color.GREEN, step.name, Color.DEFAULT))
 
             step.main()
