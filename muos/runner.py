@@ -7,4 +7,6 @@ class Runner:
 
     def run(self) -> None:
         for step in self.steps:
+            print('run: {}'.format(step.name))
+
             step.main()
