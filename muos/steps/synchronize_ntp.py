@@ -1,8 +1,8 @@
-from subprocess import run
+from ..command import Command
 from ..step import Step
 
 class SynchronizeNtp(Step):
     name: str = 'Synchronize NTP'
 
     def main(self) -> None:
-        run(['timedatectl', 'set-ntp', 'true'])
+        Command.run(['timedatectl', 'set-ntp', 'true'])
