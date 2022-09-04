@@ -19,5 +19,12 @@
 	"remoteUser": "vscode",
 	"features": {
 		"python": "os-provided"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EditorConfig.EditorConfig"
+			]
+		}
 	}
 }
