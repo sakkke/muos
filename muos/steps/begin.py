@@ -1,7 +1,8 @@
+from ..environment import Environment
 from ..step import Step
 
 class Begin(Step):
     name: str = 'Begin'
 
-    def main(self) -> None:
+    def main(self, environment: Environment) -> None:
         print('begin')

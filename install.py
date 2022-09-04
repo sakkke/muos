@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
-from muos import Runner
+from muos import Environment, Runner
 from muos.steps import Begin, End, SynchronizeNtp
 
-runner = Runner([
+environment = Environment()
+
+runner = Runner(environment, [
     Begin(),
     SynchronizeNtp(),
     End(),
