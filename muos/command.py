@@ -3,7 +3,7 @@ from typing import Any
 
 class Command:
     @staticmethod
-    def run(command: Any):
+    def run(command: Any) -> None:
         result = run(command)
 
         returncode = result.returncode
