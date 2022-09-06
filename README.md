@@ -1,2 +1,2 @@
-# muos
+# muOS
 muOS
