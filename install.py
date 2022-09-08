@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
-from muos import Environment, Runner
-from muos.steps import Begin, End, SelectDisk, SynchronizeNtp
+from muos import DiskFormat, Environment, Runner
+from muos.steps import Begin, End, FormatDisk, SelectDisk, SynchronizeNtp
 
-environment = Environment()
+environment = Environment(
+    disk_format=DiskFormat.GPT,
+)
 
 runner = Runner(environment, [
     Begin(),
     SelectDisk(),
     SynchronizeNtp(),
+    FormatDisk(),
     End(),
 ])
 
