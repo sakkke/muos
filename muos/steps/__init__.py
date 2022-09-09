@@ -5,5 +5,6 @@ from .format_partitions import FormatPartitions
 from .mount_partitions import MountPartitions
 from .partition_disk import PartitionDisk
 from .select_disk import SelectDisk
+from .select_pacman_mirrors import SelectPacmanMirrors
 from .synchronize_ntp import SynchronizeNtp
 from .unmount_partitions import UnmountPartitions

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from muos import DiskFormat, Environment, FileSystem, Runner
-from muos.steps import Begin, End, FormatDisk, FormatPartitions, MountPartitions, PartitionDisk, SelectDisk, SynchronizeNtp
+from muos.steps import Begin, End, FormatDisk, FormatPartitions, MountPartitions, PartitionDisk, SelectDisk, SelectPacmanMirrors, SynchronizeNtp
 
 environment = Environment(
     disk_format=DiskFormat.GPT,
@@ -23,6 +23,7 @@ environment = Environment(
 runner = Runner(environment, [
     Begin(),
     SelectDisk(),
+    SelectPacmanMirrors(),
     SynchronizeNtp(),
     FormatDisk(),
     PartitionDisk(),
