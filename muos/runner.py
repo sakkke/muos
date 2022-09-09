@@ -1,3 +1,4 @@
+from atexit import register as atexit_register
 from typing import List
 from .environment import Environment
 from .log import Log
@@ -17,3 +18,4 @@ class Runner:
             Log.message('[run] {}'.format(step.name))
 
             step.main(self.environemnt)
+            atexit_register(step.at_exit, self.environemnt)

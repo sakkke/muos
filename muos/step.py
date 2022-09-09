@@ -5,3 +5,6 @@ class Step:
 
     def main(self, environment: Environment) -> None:
         pass
+
+    def at_exit(self, environment: Environment) -> None:
+        pass
