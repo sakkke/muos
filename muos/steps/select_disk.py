@@ -7,5 +7,5 @@ class SelectDisk(Step):
 
     def main(self, environment: Environment) -> None:
         choices = get_disks()
-        result = environment.fzf.prompt(choices, '--height=50% --layout=reverse')
+        result = environment.fzf.prompt(choices, '--height=10 --layout=reverse')
         environment.disk = result[0]
