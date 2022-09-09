@@ -22,7 +22,15 @@ class Environment:
     pacman_mirrors: List[str]
     partitions: List[str]
 
-    def __init__(self, disk_format: DiskFormat, file_systems: List[FileSystem], mnt: str, mount_points: List[Tuple[int, str]], partitions: List[str], pacman_mirrors: List[str]=[]) -> None:
+    def __init__(
+        self,
+        disk_format: DiskFormat,
+        file_systems: List[FileSystem],
+        mnt: str,
+        mount_points: List[Tuple[int, str]],
+        partitions: List[str],
+        pacman_mirrors: List[str]=[],
+    ) -> None:
         self.disk_format = disk_format
         self.file_systems = file_systems
         self.mnt = mnt
