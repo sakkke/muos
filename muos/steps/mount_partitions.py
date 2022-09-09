@@ -3,6 +3,7 @@ from ..command import Command
 from ..environment import Environment
 from ..get_nth_partition import get_nth_partition
 from ..step import Step
+from .unmount_partitions import UnmountPartitions
 
 class MountPartitions(Step):
     name: str = 'Mount partitions'
@@ -14,3 +15,6 @@ class MountPartitions(Step):
 
             Path(mount_point).mkdir(exist_ok=True, parents=True)
             Command.run(['mount', '--verbose', partition, mount_point])
+
+    def at_exit(self, environment: Environment) -> None:
+        UnmountPartitions().main(environment)

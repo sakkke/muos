@@ -6,3 +6,4 @@ from .mount_partitions import MountPartitions
 from .partition_disk import PartitionDisk
 from .select_disk import SelectDisk
 from .synchronize_ntp import SynchronizeNtp
+from .unmount_partitions import UnmountPartitions
