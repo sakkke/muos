@@ -30,6 +30,7 @@ from muos.steps.arch_chroot import (
     GenerateAdjtime,
     GenerateLocales,
     UpdateLocaleGen,
+    UpdateVconsoleConf,
 )
 
 environment = Environment(
@@ -75,6 +76,7 @@ runner = Runner(environment, [
     GenerateAdjtime(),
     UpdateLocaleGen(),
     GenerateLocales(),
+    UpdateVconsoleConf(),
 ])
 
 runner.run()
