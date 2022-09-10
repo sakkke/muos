@@ -29,6 +29,7 @@ from muos.steps import (
 from muos.steps.arch_chroot import (
     GenerateAdjtime,
     GenerateLocales,
+    UpdateHostName,
     UpdateLocaleGen,
     UpdateVconsoleConf,
 )
@@ -41,6 +42,7 @@ environment = Environment(
         FileSystem.EXT4,
     ],
     fstab_tag=FstabTag.UUID,
+    host_name='muos',
     mnt = '/mnt',
     mount_points=[
         (2, '/'),
@@ -77,6 +79,7 @@ runner = Runner(environment, [
     UpdateLocaleGen(),
     GenerateLocales(),
     UpdateVconsoleConf(),
+    UpdateHostName(),
 ])
 
 runner.run()

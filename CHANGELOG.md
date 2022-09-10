@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `generate_locales` step.
 - Add `select_keymap` step.
 - Add `update_vconsole_conf` step.
+- Add `update_hostname` step.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.

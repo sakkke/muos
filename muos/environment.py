@@ -25,6 +25,7 @@ class Environment:
     file_systems: List[str]
     fstab_tag: FstabTag
     fzf: FzfPrompt
+    host_name: str
     keymap = 'us'
     locales: List[str]
     main_locale = 'C.UTF-8'
@@ -41,6 +42,7 @@ class Environment:
         disk_format: DiskFormat,
         file_systems: List[FileSystem],
         fstab_tag: FstabTag,
+        host_name: str,
         mnt: str,
         pacstrap_packages: List[str],
         mount_points: List[Tuple[int, str]],
@@ -55,6 +57,7 @@ class Environment:
         self.disk_format = disk_format
         self.file_systems = file_systems
         self.fstab_tag = fstab_tag
+        self.host_name = host_name
         self.keymap = keymap
         self.locales = locales
         self.main_locale = main_locale
