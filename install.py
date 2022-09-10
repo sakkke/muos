@@ -27,6 +27,7 @@ from muos.steps import (
 
 from muos.steps.arch_chroot import (
     GenerateAdjtime,
+    GenerateLocales,
     UpdateLocaleGen,
 )
 
@@ -71,6 +72,7 @@ runner = Runner(environment, [
     UpdateTimeZone(),
     GenerateAdjtime(),
     UpdateLocaleGen(),
+    GenerateLocales(),
 ])
 
 runner.run()
