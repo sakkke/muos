@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `description` member to `Environment`.
 - Change the message format in `Runner.run()`.
 
+### Fixed
+- Fix incorrect syntax in `Dockerfile` for dev container.
+
 ## [22.09.0a1] - 2022-09-10
 ### Added
 - Add `CHANGELOG.md`.

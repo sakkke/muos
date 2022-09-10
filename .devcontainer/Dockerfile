@@ -8,7 +8,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-pipx install poetry
+RUN pipx install poetry
 
-poetry self add poetry-dynamic-versioning
+RUN poetry self add poetry-dynamic-versioning
 
