@@ -31,6 +31,7 @@ from muos.steps.arch_chroot import (
     GenerateLocales,
     UpdateHostName,
     UpdateLocaleGen,
+    UpdatePasswords,
     UpdateVconsoleConf,
 )
 
@@ -57,6 +58,9 @@ environment = Environment(
         'size=300MiB, type="EFI System"',
         'type="Linux root (x86-64)"',
     ],
+    passwords=[
+        ('root', 'toor'),
+    ],
 )
 
 runner = Runner(environment, [
@@ -80,6 +84,7 @@ runner = Runner(environment, [
     GenerateLocales(),
     UpdateVconsoleConf(),
     UpdateHostName(),
+    UpdatePasswords(),
 ])
 
 runner.run()

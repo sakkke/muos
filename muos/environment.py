@@ -34,6 +34,7 @@ class Environment:
     pacman_mirrors: List[str]
     pacstrap_packages: List[str]
     partitions: List[str]
+    passwords: List[Tuple[str, str]]
     time_zone = 'UTC'
 
     def __init__(
@@ -51,6 +52,7 @@ class Environment:
         locales: List[str]=[],
         main_locale: str='C.UTF-8',
         pacman_mirrors: List[str]=[],
+        passwords: List[Tuple[str, str]] = [],
         time_zone: str='UTC',
     ) -> None:
         self.description = description
@@ -66,6 +68,7 @@ class Environment:
         self.pacstrap_packages = pacstrap_packages
         self.pacman_mirrors = pacman_mirrors
         self.partitions = partitions
+        self.passwords = passwords
         self.time_zone = time_zone
 
         self.setup_fzf()
