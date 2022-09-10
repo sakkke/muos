@@ -20,6 +20,7 @@ from muos.steps import (
     SelectPacmanMirrors,
     SelectTimeZone,
     SynchronizeNtp,
+    UpdateTimeZone,
 )
 
 environment = Environment(
@@ -58,6 +59,7 @@ runner = Runner(environment, [
     MountPartitions(),
     BootstrapArchLinux(),
     GenerateFstab(),
+    UpdateTimeZone(),
 ])
 
 runner.run()

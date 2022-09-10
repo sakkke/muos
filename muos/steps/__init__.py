@@ -11,3 +11,4 @@ from .select_pacman_mirrors import SelectPacmanMirrors
 from .select_time_zone import SelectTimeZone
 from .synchronize_ntp import SynchronizeNtp
 from .unmount_partitions import UnmountPartitions
+from .update_time_zone import UpdateTimeZone
