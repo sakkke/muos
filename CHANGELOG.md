@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve `Log.message()`.
 - Change the message format in `Step.main()`.
 - Add `description` member to `Environment`.
+- Change the message format in `Runner.run()`.
 
 ## [22.09.0a1] - 2022-09-10
 ### Added
