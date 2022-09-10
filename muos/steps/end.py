@@ -5,4 +5,5 @@ class End(Step):
     name: str = 'End'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
         print('end')

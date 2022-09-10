@@ -6,5 +6,6 @@ class PartitionDisk(Step):
     name: str = 'Partition a disk'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
         stdin = Popen(['printf', '%s', '\n'.join(environment.partitions)], stdout=PIPE)
         run(['sfdisk', environment.disk], stdin=stdin.stdout)

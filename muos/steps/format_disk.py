@@ -6,5 +6,6 @@ class FormatDisk(Step):
     name: str = 'Format a disk'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
         stdin = Popen(['printf', '%s', 'label: {}'.format(environment.disk_format)], stdout=PIPE)
         run(['sfdisk', environment.disk], stdin=stdin.stdout)

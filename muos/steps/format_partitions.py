@@ -7,6 +7,8 @@ class FormatPartitions(Step):
     name: str = 'Format partitions'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
+
         for i, file_system in enumerate(environment.file_systems):
             partition = get_nth_partition(environment.disk, i + 1)
 

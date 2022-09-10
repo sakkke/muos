@@ -6,4 +6,5 @@ class UnmountPartitions(Step):
     name: str = 'Unmount partitions'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
         Command.run(['umount', '--recursive', '--verbose', environment.mnt])

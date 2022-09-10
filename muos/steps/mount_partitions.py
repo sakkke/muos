@@ -9,6 +9,8 @@ class MountPartitions(Step):
     name: str = 'Mount partitions'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
+
         for (n, path) in environment.mount_points:
             mount_point = '{}{}'.format(environment.mnt, path)
             partition = get_nth_partition(environment.disk, n)

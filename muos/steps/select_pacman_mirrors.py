@@ -6,6 +6,8 @@ class SelectPacmanMirrors(Step):
     name: str = 'Select Pacman Mirrors'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
+
         pacman_mirrors = [
             'https://geo.mirror.pkgbuild.com/$repo/os/$arch',
             'https://mirror.rackspace.com/archlinux/$repo/os/$arch',

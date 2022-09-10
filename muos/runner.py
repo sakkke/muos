@@ -15,7 +15,5 @@ class Runner:
         Log.message('[environment] {}'.format(self.environemnt))
 
         for step in self.steps:
-            Log.message('[run] {}'.format(step.name))
-
             step.main(self.environemnt)
             atexit_register(step.at_exit, self.environemnt)

@@ -6,4 +6,5 @@ class SynchronizeNtp(Step):
     name: str = 'Synchronize NTP'
 
     def main(self, environment: Environment) -> None:
+        super().main(environment)
         Command.run(['timedatectl', 'set-ntp', 'true'])

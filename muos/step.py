@@ -1,10 +1,11 @@
 from .environment import Environment
+from .log import Log
 
 class Step:
     name: str
 
     def main(self, environment: Environment) -> None:
-        pass
+        Log.message('[run] {}'.format(self.name))
 
     def at_exit(self, environment: Environment) -> None:
         pass
