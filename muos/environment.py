@@ -21,6 +21,7 @@ class Environment:
     mnt = '/mnt'
     mount_points: List[Tuple[int, str]]
     pacman_mirrors: List[str]
+    pacstrap_packages: List[str]
     partitions: List[str]
 
     def __init__(
@@ -29,6 +30,7 @@ class Environment:
         disk_format: DiskFormat,
         file_systems: List[FileSystem],
         mnt: str,
+        pacstrap_packages: List[str],
         mount_points: List[Tuple[int, str]],
         partitions: List[str],
         pacman_mirrors: List[str]=[],
@@ -38,6 +40,7 @@ class Environment:
         self.file_systems = file_systems
         self.mnt = mnt
         self.mount_points = mount_points
+        self.pacstrap_packages = pacstrap_packages
         self.pacman_mirrors = pacman_mirrors
         self.partitions = partitions
 

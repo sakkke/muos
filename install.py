@@ -9,6 +9,7 @@ from muos import (
 
 from muos.steps import (
     Begin,
+    BootstrapArchLinux,
     FormatDisk,
     FormatPartitions,
     MountPartitions,
@@ -30,6 +31,11 @@ environment = Environment(
         (2, '/'),
         (1, '/boot'),
     ],
+    pacstrap_packages=[
+        'base',
+        'linux',
+        'linux-firmware',
+    ],
     partitions=[
         'size=300MiB, type="EFI System"',
         'type="Linux root (x86-64)"',
@@ -45,6 +51,7 @@ runner = Runner(environment, [
     PartitionDisk(),
     FormatPartitions(),
     MountPartitions(),
+    BootstrapArchLinux(),
 ])
 
 runner.run()
