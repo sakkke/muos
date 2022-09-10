@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `generate_adjtime` step.
 - Add `select_locales` step.
 - Add `select_main_locale` step.
+- Add `update_locale_gen` step.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.
