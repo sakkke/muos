@@ -2,6 +2,7 @@ from .begin import Begin
 from .end import End
 from .format_disk import FormatDisk
 from .format_partitions import FormatPartitions
+from .generate_fstab import GenerateFstab
 from .bootstrap_arch_linux import BootstrapArchLinux
 from .mount_partitions import MountPartitions
 from .partition_disk import PartitionDisk

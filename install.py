@@ -4,6 +4,7 @@ from muos import (
     DiskFormat,
     Environment,
     FileSystem,
+    FstabTag,
     Runner,
 )
 
@@ -12,6 +13,7 @@ from muos.steps import (
     BootstrapArchLinux,
     FormatDisk,
     FormatPartitions,
+    GenerateFstab,
     MountPartitions,
     PartitionDisk,
     SelectDisk,
@@ -26,6 +28,7 @@ environment = Environment(
         FileSystem.FAT32,
         FileSystem.EXT4,
     ],
+    fstab_tag=FstabTag.UUID,
     mnt = '/mnt',
     mount_points=[
         (2, '/'),
@@ -52,6 +55,7 @@ runner = Runner(environment, [
     FormatPartitions(),
     MountPartitions(),
     BootstrapArchLinux(),
+    GenerateFstab(),
 ])
 
 runner.run()

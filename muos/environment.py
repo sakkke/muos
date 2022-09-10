@@ -1,5 +1,5 @@
 from enum import Enum, auto
-from strenum import LowercaseStrEnum as StrEnum
+from strenum import LowercaseStrEnum as StrEnum, UppercaseStrEnum
 from pyfzf import FzfPrompt
 from typing import List, Tuple
 from .fzf_manager import FzfManager
@@ -12,11 +12,18 @@ class FileSystem(Enum):
     EXT4 = auto()
     FAT32 = auto()
 
+class FstabTag(UppercaseStrEnum):
+    LABEL = auto()
+    PARTLABEL = auto()
+    PARTUUID = auto()
+    UUID = auto()
+
 class Environment:
     description: str
     disk: str
     disk_format: DiskFormat
     file_systems: List[str]
+    fstab_tag: FstabTag
     fzf: FzfPrompt
     mnt = '/mnt'
     mount_points: List[Tuple[int, str]]
@@ -29,6 +36,7 @@ class Environment:
         description: str,
         disk_format: DiskFormat,
         file_systems: List[FileSystem],
+        fstab_tag: FstabTag,
         mnt: str,
         pacstrap_packages: List[str],
         mount_points: List[Tuple[int, str]],
@@ -38,6 +46,7 @@ class Environment:
         self.description = description
         self.disk_format = disk_format
         self.file_systems = file_systems
+        self.fstab_tag = fstab_tag
         self.mnt = mnt
         self.mount_points = mount_points
         self.pacstrap_packages = pacstrap_packages
