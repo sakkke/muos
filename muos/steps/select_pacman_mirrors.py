@@ -340,4 +340,4 @@ class SelectPacmanMirrors(Step):
             'https://mirrors.42tm.tech/archlinux/$repo/os/$arch',
         ]
 
-        self.pacman_mirrors = environment.fzf.prompt(pacman_mirrors, '--height=10 --layout=reverse --multi')
+        environment.pacman_mirrors = environment.fzf.prompt(pacman_mirrors, '--height=10 --layout=reverse --multi')
