@@ -23,6 +23,10 @@ from muos.steps import (
     UpdateTimeZone,
 )
 
+from muos.steps.arch_chroot import (
+    GenerateAdjtime,
+)
+
 environment = Environment(
     description='Installing muOS...',
     disk_format=DiskFormat.GPT,
@@ -60,6 +64,7 @@ runner = Runner(environment, [
     BootstrapArchLinux(),
     GenerateFstab(),
     UpdateTimeZone(),
+    GenerateAdjtime(),
 ])
 
 runner.run()
