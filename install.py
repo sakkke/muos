@@ -9,7 +9,6 @@ from muos import (
 
 from muos.steps import (
     Begin,
-    End,
     FormatDisk,
     FormatPartitions,
     MountPartitions,
@@ -45,7 +44,6 @@ runner = Runner(environment, [
     PartitionDisk(),
     FormatPartitions(),
     MountPartitions(),
-    End(),
 ])
 
 runner.run()
