@@ -5,7 +5,7 @@ class Step:
     description: str
 
     def main(self, environment: Environment) -> None:
-        Log.message('[run] {}'.format(self.description))
+        Log.message(self.description)
 
     def at_exit(self, environment: Environment) -> None:
         pass
