@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `select_time_zone` step.
 - Add `update_time_zone` step.
 - Add `generate_adjtime` step.
+- Add `select_locales` step.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.

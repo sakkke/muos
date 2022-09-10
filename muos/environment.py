@@ -25,6 +25,7 @@ class Environment:
     file_systems: List[str]
     fstab_tag: FstabTag
     fzf: FzfPrompt
+    locales: List[str]
     mnt = '/mnt'
     mount_points: List[Tuple[int, str]]
     pacman_mirrors: List[str]
@@ -42,6 +43,7 @@ class Environment:
         pacstrap_packages: List[str],
         mount_points: List[Tuple[int, str]],
         partitions: List[str],
+        locales: List[str]=[],
         pacman_mirrors: List[str]=[],
         time_zone: str='UTC',
     ) -> None:
@@ -49,6 +51,7 @@ class Environment:
         self.disk_format = disk_format
         self.file_systems = file_systems
         self.fstab_tag = fstab_tag
+        self.locales = locales
         self.mnt = mnt
         self.mount_points = mount_points
         self.pacstrap_packages = pacstrap_packages
