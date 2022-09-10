@@ -29,6 +29,7 @@ from muos.steps import (
 from muos.steps.arch_chroot import (
     GenerateAdjtime,
     GenerateLocales,
+    InstallGrub,
     UpdateHostName,
     UpdateLocaleGen,
     UpdatePasswords,
@@ -36,6 +37,7 @@ from muos.steps.arch_chroot import (
 )
 
 environment = Environment(
+    bootloader_id='GRUB',
     description='Installing muOS...',
     disk_format=DiskFormat.GPT,
     file_systems=[
@@ -85,6 +87,7 @@ runner = Runner(environment, [
     UpdateVconsoleConf(),
     UpdateHostName(),
     UpdatePasswords(),
+    InstallGrub(),
 ])
 
 runner.run()

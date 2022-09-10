@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `update_vconsole_conf` step.
 - Add `update_hostname` step.
 - Add `update_passwords` step.
+- Add `install_grub` step.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.

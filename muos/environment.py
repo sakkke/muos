@@ -19,6 +19,7 @@ class FstabTag(UppercaseStrEnum):
     UUID = auto()
 
 class Environment:
+    bootloader_id: str
     description: str
     disk: str
     disk_format: DiskFormat
@@ -39,6 +40,7 @@ class Environment:
 
     def __init__(
         self,
+        bootloader_id: str,
         description: str,
         disk_format: DiskFormat,
         file_systems: List[FileSystem],
@@ -55,6 +57,7 @@ class Environment:
         passwords: List[Tuple[str, str]] = [],
         time_zone: str='UTC',
     ) -> None:
+        self.bootloader_id = bootloader_id
         self.description = description
         self.disk_format = disk_format
         self.file_systems = file_systems
