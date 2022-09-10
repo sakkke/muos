@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve descriptions in steps.
 - Improve `Log.message()`.
 - Change the message format in `Step.main()`.
+- Add `description` member to `Environment`.
 
 ## [22.09.0a1] - 2022-09-10
 ### Added

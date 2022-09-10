@@ -19,6 +19,7 @@ from muos.steps import (
 )
 
 environment = Environment(
+    description='Installing muOS...',
     disk_format=DiskFormat.GPT,
     file_systems=[
         FileSystem.FAT32,

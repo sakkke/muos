@@ -13,6 +13,7 @@ class FileSystem(Enum):
     FAT32 = auto()
 
 class Environment:
+    description: str
     disk: str
     disk_format: DiskFormat
     file_systems: List[str]
@@ -24,6 +25,7 @@ class Environment:
 
     def __init__(
         self,
+        description: str,
         disk_format: DiskFormat,
         file_systems: List[FileSystem],
         mnt: str,
@@ -31,6 +33,7 @@ class Environment:
         partitions: List[str],
         pacman_mirrors: List[str]=[],
     ) -> None:
+        self.description = description
         self.disk_format = disk_format
         self.file_systems = file_systems
         self.mnt = mnt
