@@ -3,7 +3,7 @@ from ..environment import Environment
 from ..step import Step
 
 class PartitionDisk(Step):
-    description: str = 'Partition a disk'
+    description: str = 'Partitioning a disk...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
