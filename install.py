@@ -17,6 +17,7 @@ from muos.steps import (
     MountPartitions,
     PartitionDisk,
     SelectDisk,
+    SelectKeymap,
     SelectLocales,
     SelectMainLocale,
     SelectPacmanMirrors,
@@ -57,6 +58,7 @@ environment = Environment(
 
 runner = Runner(environment, [
     Begin(),
+    SelectKeymap(),
     SelectDisk(),
     SelectPacmanMirrors(),
     SelectTimeZone(),
