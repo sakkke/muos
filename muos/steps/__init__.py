@@ -8,6 +8,7 @@ from .mount_partitions import MountPartitions
 from .partition_disk import PartitionDisk
 from .select_disk import SelectDisk
 from .select_locales import SelectLocales
+from .select_main_locale import SelectMainLocale
 from .select_pacman_mirrors import SelectPacmanMirrors
 from .select_time_zone import SelectTimeZone
 from .synchronize_ntp import SynchronizeNtp

@@ -26,6 +26,7 @@ class Environment:
     fstab_tag: FstabTag
     fzf: FzfPrompt
     locales: List[str]
+    main_locale = 'C.UTF-8'
     mnt = '/mnt'
     mount_points: List[Tuple[int, str]]
     pacman_mirrors: List[str]
@@ -44,6 +45,7 @@ class Environment:
         mount_points: List[Tuple[int, str]],
         partitions: List[str],
         locales: List[str]=[],
+        main_locale: str='C.UTF-8',
         pacman_mirrors: List[str]=[],
         time_zone: str='UTC',
     ) -> None:
@@ -52,6 +54,7 @@ class Environment:
         self.file_systems = file_systems
         self.fstab_tag = fstab_tag
         self.locales = locales
+        self.main_locale = main_locale
         self.mnt = mnt
         self.mount_points = mount_points
         self.pacstrap_packages = pacstrap_packages
