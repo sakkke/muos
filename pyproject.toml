@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 pyfzf = "0.3.1"
+StrEnum = "0.4.8"
 
 
 [build-system]

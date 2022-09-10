@@ -6,13 +6,30 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[[package]]
+name = "StrEnum"
+version = "0.4.8"
+description = "An Enum that inherits from str."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+docs = ["myst-parser[linkify]", "sphinx", "sphinx-rtd-theme"]
+release = ["twine"]
+test = ["pylint", "pytest", "pytest-black", "pytest-cov", "pytest-pylint"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "e6deb4bbc73a8f88b92fa03c251de92892bc623a4533bc6cf397ca758f04011f"
+content-hash = "8b519c4a4dd57c89b976f18c11c7e04777858b8e0a4bde2691a727435753a2ab"
 
 [metadata.files]
 pyfzf = [
     {file = "pyfzf-0.3.1-py3-none-any.whl", hash = "sha256:736f71563461b75f6f85b55345bdc638fa0dc14c32c857c59e8b1ca1cfa3cf4a"},
     {file = "pyfzf-0.3.1.tar.gz", hash = "sha256:dd902e34cffeca9c3082f96131593dd20b4b3a9bba5b9dde1b0688e424b46bd2"},
+]
+StrEnum = [
+    {file = "StrEnum-0.4.8-py3-none-any.whl", hash = "sha256:36de425703f97511326b358dfd25939c9dabb4bee1ca15663570ba7cb8b5fa9c"},
+    {file = "StrEnum-0.4.8.tar.gz", hash = "sha256:08a7647f4fac2977470e5618cccd5e8b939768f02e5f5dd7864adaa329559949"},
 ]
