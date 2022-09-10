@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add `bootstrap_arch_linux` step.
 - Add `generate_fstab` step.
+- Add `select_time_zone` step.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.

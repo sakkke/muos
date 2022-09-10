@@ -18,6 +18,7 @@ from muos.steps import (
     PartitionDisk,
     SelectDisk,
     SelectPacmanMirrors,
+    SelectTimeZone,
     SynchronizeNtp,
 )
 
@@ -49,6 +50,7 @@ runner = Runner(environment, [
     Begin(),
     SelectDisk(),
     SelectPacmanMirrors(),
+    SelectTimeZone(),
     SynchronizeNtp(),
     FormatDisk(),
     PartitionDisk(),

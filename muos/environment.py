@@ -30,6 +30,7 @@ class Environment:
     pacman_mirrors: List[str]
     pacstrap_packages: List[str]
     partitions: List[str]
+    time_zone = 'UTC'
 
     def __init__(
         self,
@@ -42,6 +43,7 @@ class Environment:
         mount_points: List[Tuple[int, str]],
         partitions: List[str],
         pacman_mirrors: List[str]=[],
+        time_zone: str='UTC',
     ) -> None:
         self.description = description
         self.disk_format = disk_format
@@ -52,6 +54,7 @@ class Environment:
         self.pacstrap_packages = pacstrap_packages
         self.pacman_mirrors = pacman_mirrors
         self.partitions = partitions
+        self.time_zone = time_zone
 
         self.setup_fzf()
 
