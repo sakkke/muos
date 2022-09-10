@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.
 - Improve timing of calling `end` step.
+- Rename `Runner.name` to `Runner.description`.
 
 ## [22.09.0a1] - 2022-09-10
 ### Added

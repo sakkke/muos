@@ -3,7 +3,7 @@ from ..environment import Environment
 from ..step import Step
 
 class SelectPacmanMirrors(Step):
-    name: str = 'Select Pacman Mirrors'
+    description: str = 'Select Pacman Mirrors'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
