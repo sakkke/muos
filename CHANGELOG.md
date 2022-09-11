@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [22.09.0a2] - 2022-09-11
 ### Added
 - Add `bootstrap_arch_linux` step.
 - Add `generate_fstab` step.
@@ -44,5 +46,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add `CHANGELOG.md`.
 
-[Unreleased]: https://github.com/sakkke/muos/compare/v22.09.0a1...HEAD
+[Unreleased]: https://github.com/sakkke/muos/compare/v22.09.0a2...HEAD
+[22.09.0a2]: https://github.com/sakkke/muos/compare/v22.09.0a1...v22.09.0a2
 [22.09.0a1]: https://github.com/sakkke/muos/releases/tag/v22.09.0a1
