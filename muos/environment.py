@@ -20,6 +20,7 @@ class FstabTag(UppercaseStrEnum):
 
 class Environment:
     bootloader_id: str
+    bootx64_efi: str
     description: str
     disk: str
     disk_format: DiskFormat
@@ -42,6 +43,7 @@ class Environment:
     def __init__(
         self,
         bootloader_id: str,
+        bootx64_efi: str,
         description: str,
         disk_format: DiskFormat,
         file_systems: List[FileSystem],
@@ -60,6 +62,7 @@ class Environment:
         time_zone: str='UTC',
     ) -> None:
         self.bootloader_id = bootloader_id
+        self.bootx64_efi = bootx64_efi
         self.description = description
         self.disk_format = disk_format
         self.file_systems = file_systems

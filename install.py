@@ -32,6 +32,7 @@ from muos.steps.arch_chroot import (
     GenerateLocales,
     InstallGrub,
     InstallNetworkManager,
+    MakeBootx64Efi,
     UpdateHostName,
     UpdateLocaleGen,
     UpdatePasswords,
@@ -40,6 +41,7 @@ from muos.steps.arch_chroot import (
 
 environment = Environment(
     bootloader_id='GRUB',
+    bootx64_efi='<efi_dir>/EFI/<bootloader_id>/grubx64.efi',
     description='Installing muOS...',
     disk_format=DiskFormat.GPT,
     file_systems=[
@@ -90,6 +92,7 @@ runner = Runner(environment, [
     UpdateHostName(),
     UpdatePasswords(),
     InstallGrub(),
+    MakeBootx64Efi(),
     InstallNetworkManager(),
     EnableSystemdServices(),
 ])

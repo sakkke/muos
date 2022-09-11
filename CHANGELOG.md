@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `enable_systemd_services` step.
 - Add `install_networkmanager` step.
 - Add shell scripts for dev.
+- Add `make_bootx64_efi` step.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.
