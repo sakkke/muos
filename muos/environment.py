@@ -36,6 +36,7 @@ class Environment:
     pacstrap_packages: List[str]
     partitions: List[str]
     passwords: List[Tuple[str, str]]
+    systemd_services: List[str] = []
     time_zone = 'UTC'
 
     def __init__(
@@ -55,6 +56,7 @@ class Environment:
         main_locale: str='C.UTF-8',
         pacman_mirrors: List[str]=[],
         passwords: List[Tuple[str, str]] = [],
+        systemd_services: List[str] = [],
         time_zone: str='UTC',
     ) -> None:
         self.bootloader_id = bootloader_id
@@ -72,6 +74,7 @@ class Environment:
         self.pacman_mirrors = pacman_mirrors
         self.partitions = partitions
         self.passwords = passwords
+        self.systemd_services = systemd_services
         self.time_zone = time_zone
 
         self.setup_fzf()

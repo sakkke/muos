@@ -27,6 +27,7 @@ from muos.steps import (
 )
 
 from muos.steps.arch_chroot import (
+    EnableSystemdServices,
     GenerateAdjtime,
     GenerateLocales,
     InstallGrub,
@@ -88,6 +89,7 @@ runner = Runner(environment, [
     UpdateHostName(),
     UpdatePasswords(),
     InstallGrub(),
+    EnableSystemdServices(),
 ])
 
 runner.run()
