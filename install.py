@@ -31,6 +31,7 @@ from muos.steps.arch_chroot import (
     GenerateAdjtime,
     GenerateLocales,
     InstallGrub,
+    InstallNetworkManager,
     UpdateHostName,
     UpdateLocaleGen,
     UpdatePasswords,
@@ -89,6 +90,7 @@ runner = Runner(environment, [
     UpdateHostName(),
     UpdatePasswords(),
     InstallGrub(),
+    InstallNetworkManager(),
     EnableSystemdServices(),
 ])
 

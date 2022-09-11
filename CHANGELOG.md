@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `install_grub` step.
 - Initialize Git Hooks.
 - Add `enable_systemd_services` step.
+- Add `install_networkmanager` step.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.
