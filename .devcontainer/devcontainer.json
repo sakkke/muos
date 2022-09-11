@@ -23,7 +23,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"EditorConfig.EditorConfig"
+				"EditorConfig.EditorConfig",
+				"bungcip.better-toml"
 			]
 		}
 	}

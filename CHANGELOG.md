@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Update post create command for dev container.
+- Add a VSCode extension for `.toml`.
 
 ## [22.09.0a2] - 2022-09-11
 ### Added
