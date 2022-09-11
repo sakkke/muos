@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+port="6867"
+
+pacman --noconfirm --sync --refresh git python-pip
+
+tempdir="$(mktemp --directory)"
+trap 'rm --force --recursive "$tempdir"' EXIT
+
+dest="$(ip route get 1.2.3.4 | head --lines=1 | awk '{print $7}')"
+echo "dest=$dest"
+
+cd "$tempdir"
+nc -lvp "$port" | tar --extract --file=- --verbose
+pip install .
+./install.py
+lsblk

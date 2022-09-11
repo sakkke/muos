@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+dest="$1"
+port="6867"
+
+cd "$(dirname "$0")/.."
+tar --create --file=- --group=0 --owner=0 . | nc -vw 2 "$dest" "$port"

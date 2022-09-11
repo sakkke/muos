@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialize Git Hooks.
 - Add `enable_systemd_services` step.
 - Add `install_networkmanager` step.
+- Add shell scripts for dev.
 
 ### Changed
 - Improve `Log.message()` from `Runner.run()`.
