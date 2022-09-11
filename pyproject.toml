@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 pyfzf = "0.3.1"
 StrEnum = "0.4.8"
+Sphinx = {version = "^5.1.1", optional = true}
 
 
 [build-system]
@@ -18,3 +19,6 @@ build-backend = "poetry_dynamic_versioning.backend"
 [tool.poetry-dynamic-versioning]
 enable = true
 style = 'pep440'
+
+[tool.poetry.extras]
+docs = ["Sphinx"]
