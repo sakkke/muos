@@ -24,7 +24,8 @@
 		"vscode": {
 			"extensions": [
 				"EditorConfig.EditorConfig",
-				"bungcip.better-toml"
+				"bungcip.better-toml",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
