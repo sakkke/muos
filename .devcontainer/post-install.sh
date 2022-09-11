@@ -5,3 +5,5 @@
 pipx install poetry
 
 poetry self add poetry-dynamic-versioning
+
+poetry install
