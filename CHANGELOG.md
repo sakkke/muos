@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `netlify-cli` to dev container.
 - Add CircleCI CLI to dev container.
 
+### Changed
+- Update the format of `Log.message()`.
+
 ## [22.09.0a2] - 2022-09-11
 ### Added
 - Add `bootstrap_arch_linux` step.

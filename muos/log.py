@@ -7,7 +7,7 @@ class Log:
     def message(value: Any) -> None:
         print('{}[{}] {}{}{}{}'.format(
             Color.CYAN,
-            datetime.now(),
+            datetime.now().strftime('%H:%M:%S.%f'),
             Color.DEFAULT,
             Color.GREEN,
             value,
