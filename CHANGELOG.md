@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update the format of `Log.message()`.
+- Fix typo in a member name in `Runner`.
 
 ## [22.09.0a2] - 2022-09-11
 ### Added

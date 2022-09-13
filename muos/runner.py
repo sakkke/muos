@@ -5,15 +5,15 @@ from .log import Log
 from .step import Step
 
 class Runner:
-    environemnt: Environment
+    environment: Environment
 
     def __init__(self, environment: Environment, steps: List[Step]) -> None:
-        self.environemnt = environment
+        self.environment = environment
         self.steps = steps
 
     def run(self) -> None:
-        Log.message(self.environemnt.description)
+        Log.message(self.environment.description)
 
         for step in self.steps:
-            step.main(self.environemnt)
-            atexit_register(step.at_exit, self.environemnt)
+            step.main(self.environment)
+            atexit_register(step.at_exit, self.environment)
