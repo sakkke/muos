@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `deploy-docs` workflow.
 - Add CircleCI status badge to `README.md`.
 - Add social image to `README.md`.
-- Add heading "Links".
+- Add heading "Links" to `README.md`.
 
 ### Changed
 - Update the format of `Log.message()`.
