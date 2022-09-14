@@ -17,6 +17,26 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+  deploy-docs:
+    docker:
+      - image: cimg/python:3.10-node
+    steps:
+      - checkout
+      - run:
+          name: "Install Poetry"
+          command: "pip install poetry"
+      - run:
+          name: "Install Netlify CLI"
+          command: "npm --prefix=./netlify-cli install --dev"
+      - run:
+          name: "Install dependencies"
+          command: "poetry install --extras docs"
+      - run:
+          name: "Generate documents"
+          command: "poetry run make --directory=./docs html"
+      - run:
+          name: "Deploy to Netlify"
+          command: "npm --prefix=./netlify-cli exec netlify deploy"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -24,3 +44,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+  deploy-docs-workflow:
+    jobs:
+      - deploy-docs
