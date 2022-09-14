@@ -8,6 +8,12 @@
 
 muOS
 
+## Links
+
+- [CHANGELOG.md](./CHANGELOG.md)
+- [LICENSE](./LICENSE)
+- [Website](https://muos.netlify.app/)
+
 ## Dev
 
 1. In target:
