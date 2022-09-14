@@ -1,4 +1,5 @@
-# muOS
+[![](https://img.shields.io/circleci/build/github/sakkke/muos?style=for-the-badge)](https://app.circleci.com/pipelines/github/sakkke/muos)
+
 muOS
 
 ## Dev
