@@ -1,5 +1,6 @@
 .PHONY: docs
 docs:
+	poetry run sphinx-apidoc --output-dir ./docs/source ./muos
 	poetry run make --directory=./docs html
 
 .PHONY: serve-docs

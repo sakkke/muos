@@ -1,0 +1,7 @@
+*
+!*/
+!/.gitignore
+!/Makefile
+!/make.bat
+!/source/conf.py
+!/source/index.rst
