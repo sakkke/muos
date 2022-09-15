@@ -33,7 +33,7 @@ jobs:
           command: "poetry install --extras docs"
       - run:
           name: "Generate documents"
-          command: "poetry run make --directory=./docs html"
+          command: "make docs"
       - run:
           name: "Deploy to Netlify"
           command: "npm --prefix=./netlify-cli exec -- netlify deploy --prod"
