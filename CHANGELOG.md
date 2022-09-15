@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add social image to `README.md`.
 - Add heading "Links" to `README.md`.
 - Add `sphinx-rtd-theme` as a development dependency.
+- Add `Makefile`.
 
 ### Changed
 - Update the format of `Log.message()`.
