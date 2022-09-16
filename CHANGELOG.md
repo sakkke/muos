@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `Makefile`.
 - Add `pytest` as a development dependency.
 - Add `run-tests-workflow`.
+- Add `.vscode/settings.json`.
 
 ### Changed
 - Update the format of `Log.message()`.
