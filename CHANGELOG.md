@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `sphinx-rtd-theme` as a development dependency.
 - Add `Makefile`.
 - Add `pytest` as a development dependency.
+- Add `run-tests-workflow`.
 
 ### Changed
 - Update the format of `Log.message()`.
