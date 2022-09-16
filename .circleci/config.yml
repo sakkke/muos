@@ -30,7 +30,7 @@ jobs:
           command: "npm --prefix=./netlify-cli install --dev"
       - run:
           name: "Install dependencies"
-          command: "poetry install --extras docs"
+          command: "poetry install --extras=docs"
       - run:
           name: "Generate documents"
           command: "make docs"
@@ -47,7 +47,7 @@ jobs:
           command: "pip install poetry"
       - run:
           name: "Install dependencies"
-          command: "poetry install --extras test"
+          command: "poetry install --extras=test"
       - run:
           name: "Run tests"
           command: "make test"
