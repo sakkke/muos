@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add a VSCode extension for Git.
 - Add `install-devdeps` task to `Makefile`.
+- Add `install-sh-workflow`.
 
 ### Removed
 - Remove `say-hello-workflow`.

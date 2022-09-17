@@ -48,6 +48,14 @@ jobs:
       - run:
           name: "Deploy to TestPyPI"
           command: "poetry publish --build --repository=test-pypi"
+  install-sh:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Find a loopback device"
+          command: "losetup --find"
   run-tests:
     docker:
       - image: cimg/python:3.10
@@ -72,6 +80,9 @@ workflows:
   deploy-test-pypi-workflow:
     jobs:
       - deploy-test-pypi
+  install-sh-workflow:
+    jobs:
+      - install-sh
   run-tests-workflow:
     jobs:
       - run-tests
