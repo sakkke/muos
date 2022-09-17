@@ -49,8 +49,8 @@ jobs:
           name: "Deploy to TestPyPI"
           command: "poetry publish --build --repository=test-pypi"
   install-sh:
-    docker:
-      - image: cimg/base:stable
+    machine:
+      image: ubuntu-2204:2022.07.1
     steps:
       - checkout
       - run:
