@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make tags trigger in `deploy-test-pypi-workflow`.
 - Clean up workflows.
 - Rename a job `deploy-test-pypi` to `publish-test-pypi`.
+- Convert to src layout.
 
 ### Removed
 - Remove `say-hello-workflow`.

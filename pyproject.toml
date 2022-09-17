@@ -4,6 +4,7 @@ version = "0.0.0"
 description = ""
 authors = ["sakkke <w32w64@gmail.com>"]
 readme = "README.md"
+packages = [{include = "muos", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

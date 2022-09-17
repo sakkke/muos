@@ -1,6 +1,6 @@
 .PHONY: docs
 docs:
-	poetry run sphinx-apidoc --output-dir ./docs/source ./muos
+	poetry run sphinx-apidoc --output-dir ./docs/source ./src/muos
 	poetry run make --directory=./docs html
 
 .PHONY: install-devdeps
@@ -13,4 +13,4 @@ serve-docs:
 
 .PHONY: test
 test:
-	poetry run pytest --codecov --cov=./muos ./tests
+	poetry run pytest --codecov --cov=./src/muos ./tests
