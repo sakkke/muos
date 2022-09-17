@@ -11,8 +11,8 @@ muOS
 ## Links
 
 - [CHANGELOG.md](./CHANGELOG.md)
+- [Documents](https://muos.netlify.app/)
 - [LICENSE](./LICENSE)
-- [Website](https://muos.netlify.app/)
 
 ## Dev
 
