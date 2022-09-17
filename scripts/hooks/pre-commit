@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if git status --short | grep -q '^M  CHANGELOG.md$'; then
+if git status --short | grep -q '^M  CHANGELOG.rst$'; then
     :
 else
-    echo 'The commit MUST include modified CHANGELOG.md.'
+    echo 'The commit MUST include modified CHANGELOG.rst.'
     exit 1
 fi
