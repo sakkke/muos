@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `install-devdeps` task to `Makefile`.
 - Add `install-sh-workflow`.
 - Add `deploy-docs-draft` job.
+- Add VSCode extensions for `*.rst`.
 
 ### Changed
 - Make tags trigger in `deploy-test-pypi-workflow`.

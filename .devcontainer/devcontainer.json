@@ -26,7 +26,9 @@
 				"EditorConfig.EditorConfig",
 				"bungcip.better-toml",
 				"ms-azuretools.vscode-docker",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"lextudio.restructuredtext",
+				"trond-snekvik.simple-rst"
 			]
 		}
 	}
