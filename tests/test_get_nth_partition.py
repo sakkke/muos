@@ -1,6 +1,6 @@
 from muos.get_nth_partition import get_nth_partition
 
-def test_get_nth_partition():
+def test_sda():
     assert get_nth_partition('/dev/sda', 1) == '/dev/sda1'
 
 def test_loop0():
