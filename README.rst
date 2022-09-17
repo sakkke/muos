@@ -29,15 +29,15 @@ Dev
 
 .. code:: bash
 
-   dest="$(ip route get 1.2.3.4 | head --lines=1 | awk '{print $7}')"
-   echo "dest=$dest"
+   addr="$(ip route get 1.2.3.4 | head --lines=1 | awk '{print $7}')"
+   echo "addr=$addr"
    nc -lvp 6867 | install /dev/stdin /usr/local/bin/serve
 
 2. In host:
 
 .. code:: bash
 
-   nc -vw 2 '<dest>' 6867 < ./scripts/serve
+   nc -vw 2 '<addr>' 6867 < ./scripts/serve
 
 3. In target:
 
@@ -49,7 +49,7 @@ Dev
 
 .. code:: bash
 
-   ./scripts/transfer '<dest>'
+   ./scripts/transfer '<addr>'
 
 .. |image1| image:: https://img.shields.io/circleci/build/github/sakkke/muos?style=for-the-badge
    :target: https://app.circleci.com/pipelines/github/sakkke/muos
