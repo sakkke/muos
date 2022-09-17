@@ -37,9 +37,10 @@ Dev
 
 .. code:: bash
 
-   nc -vw 2 '<addr>' 6867 < ./scripts/serve
+   addr='<addr>'
+   nc -vw 2 "$addr" 6867 < ./scripts/serve
 
-3. In target:
+1. In target:
 
 .. code:: bash
 
@@ -49,7 +50,7 @@ Dev
 
 .. code:: bash
 
-   ./scripts/transfer '<addr>'
+   ./scripts/transfer "$addr"
 
 .. |image1| image:: https://img.shields.io/circleci/build/github/sakkke/muos?style=for-the-badge
    :target: https://app.circleci.com/pipelines/github/sakkke/muos
