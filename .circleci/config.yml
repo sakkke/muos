@@ -37,6 +37,26 @@ jobs:
       - run:
           name: "Deploy to Netlify"
           command: "npm --prefix=./netlify-cli exec -- netlify deploy --prod"
+  deploy-test-pypi:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: "Install Poetry"
+          command: "pip install poetry"
+      - run:
+          name: "Install poetry-dynamic-versioning"
+          command: "poetry self add poetry-dynamic-versioning"
+      - run:
+          name: "Install dependencies"
+          command: "poetry install"
+      - run:
+          name: "Register test-pypi"
+          command: "poetry config repositories.test-pypi https://test.pypi.org/legacy/"
+      - run:
+          name: "Deploy to TestPyPI"
+          command: "poetry publish --build --password=$TEST_PYPI_PASSWORD --repository=test-pypi --username=$TEST_PYPI_USERNAME"
   run-tests:
     docker:
       - image: cimg/python:3.10
@@ -61,6 +81,9 @@ workflows:
   deploy-docs-workflow:
     jobs:
       - deploy-docs
+  deploy-test-pypi-workflow:
+    jobs:
+      - deploy-test-pypi
   run-tests-workflow:
     jobs:
       - run-tests

@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `pytest-cov` as a development dependency.
 - Add `GitPython` as a development dependency.
 - Add Codecov status badge.
+- Add `deploy-test-pypi-workflow`.
 
 ### Changed
 - Update the format of `Log.message()`.
