@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add a VSCode extension for Git.
 
-## [v22.09.0a3] - 2022-09-17
+## [22.09.0a3] - 2022-09-17
 ### Added
 - Update post create command for dev container.
 - Add a VSCode extension for `.toml`.
