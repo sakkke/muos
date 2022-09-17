@@ -19,6 +19,8 @@ Added
 -  Add ``install-sh-workflow``.
 -  Add ``deploy-docs-draft`` job.
 -  Add VSCode extensions for ``*.rst``.
+-  Add ``CODE_OF_CONDUCT.rst``.
+-  Add ``CONTRIBUTING.rst``.
 
 Changed
 ~~~~~~~
