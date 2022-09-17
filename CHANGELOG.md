@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Add a VSCode extension for Git.
+- Add `install-devdeps` task to `Makefile`.
 
 ## [22.09.0a3] - 2022-09-17
 ### Added
