@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `pytest` as a development dependency.
 - Add `run-tests-workflow`.
 - Add `.vscode/settings.json`.
+- Add `pytest-codecov` as a development dependency.
 
 ### Changed
 - Update the format of `Log.message()`.
