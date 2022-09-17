@@ -79,7 +79,12 @@ workflows:
       - deploy-docs
   deploy-test-pypi-workflow:
     jobs:
-      - deploy-test-pypi
+      - deploy-test-pypi:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
   install-sh-workflow:
     jobs:
       - install-sh
