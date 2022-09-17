@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rename a job `deploy-test-pypi` to `publish-test-pypi`.
 - Convert to src layout.
 - Move `netlify-cli` to `tools` directory.
+- Move `hooks` and `install-hooks.sh` to `scripts` directory.
 
 ### Removed
 - Remove `say-hello-workflow`.
