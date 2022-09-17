@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a VSCode extension for Git.
 - Add `install-devdeps` task to `Makefile`.
 
+### Removed
+- Remove `say-hello-workflow`.
+
 ## [22.09.0a3] - 2022-09-17
 ### Added
 - Update post create command for dev container.
