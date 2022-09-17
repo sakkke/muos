@@ -426,12 +426,12 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [extras]
 docs = ["Sphinx", "sphinx-rtd-theme"]
-test = ["pytest", "pytest-codecov"]
+test = ["pytest", "pytest-codecov", "pytest-cov"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "3f9123a0f141285b59e27a50e8e6c8b1465a4a6b25a867f5bf07104cd730d5a8"
+content-hash = "9a476b1fb6cb2f4be4fcfb6189138c55f9892b42971b259fe691b5d3afa7ba5b"
 
 [metadata.files]
 alabaster = [
