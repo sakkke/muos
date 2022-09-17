@@ -25,7 +25,15 @@ jobs:
       - run:
           name: "Deploy to Netlify"
           command: "npm --prefix=./netlify-cli exec -- netlify deploy --prod"
-  deploy-test-pypi:
+  install-sh:
+    machine:
+      image: ubuntu-2204:2022.07.1
+    steps:
+      - checkout
+      - run:
+          name: "Find a loopback device"
+          command: "losetup --find"
+  publish-test-pypi:
     docker:
       - image: cimg/python:3.10
     steps:
@@ -48,14 +56,6 @@ jobs:
       - run:
           name: "Deploy to TestPyPI"
           command: "poetry publish --build --repository=test-pypi"
-  install-sh:
-    machine:
-      image: ubuntu-2204:2022.07.1
-    steps:
-      - checkout
-      - run:
-          name: "Find a loopback device"
-          command: "losetup --find"
   run-tests:
     docker:
       - image: cimg/python:3.10
@@ -88,7 +88,7 @@ workflows:
               only: /^v.*/
           requires:
             - run-tests
-      - deploy-test-pypi:
+      - publish-test-pypi:
           filters:
             branches:
               ignore: /.*/
