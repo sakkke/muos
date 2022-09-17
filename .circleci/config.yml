@@ -55,8 +55,11 @@ jobs:
           name: "Register test-pypi"
           command: "poetry config repositories.test-pypi https://test.pypi.org/legacy/"
       - run:
+          name: "Register API token"
+          command: "poetry config pypi-token.test-pypi $TEST_PYPI_TOKEN"
+      - run:
           name: "Deploy to TestPyPI"
-          command: "poetry publish --build --password=$TEST_PYPI_PASSWORD --repository=test-pypi --username=$TEST_PYPI_USERNAME"
+          command: "poetry publish --build --repository=test-pypi"
   run-tests:
     docker:
       - image: cimg/python:3.10
