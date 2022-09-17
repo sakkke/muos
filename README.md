@@ -5,6 +5,7 @@
 </h1>
 
 [![](https://img.shields.io/circleci/build/github/sakkke/muos?style=for-the-badge)](https://app.circleci.com/pipelines/github/sakkke/muos)
+[![](https://img.shields.io/codecov/c/github/sakkke/muos?style=for-the-badge)](https://app.codecov.io/gh/sakkke/muos)
 
 muOS
 
