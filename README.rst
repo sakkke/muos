@@ -19,6 +19,8 @@ Links
 -----
 
 -  `CHANGELOG.rst <./CHANGELOG.rst>`__
+-  `CODE_OF_CONDUCT.rst <./CODE_OF_CONDUCT.rst>`__
+-  `CONTRIBUTING.rst <./CONTRIBUTING.rst>`__
 -  `Documents <https://muos.netlify.app/>`__
 -  `LICENSE <./LICENSE>`__
 
