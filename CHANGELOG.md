@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Clean up workflows.
 - Rename a job `deploy-test-pypi` to `publish-test-pypi`.
 - Convert to src layout.
+- Move `netlify-cli` to `tools` directory.
 
 ### Removed
 - Remove `say-hello-workflow`.

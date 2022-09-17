@@ -8,4 +8,4 @@ poetry self add poetry-dynamic-versioning
 
 poetry install
 
-npm --prefix ./netlify-cli install
+npm --prefix ./tools/netlify-cli install

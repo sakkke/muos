@@ -15,7 +15,7 @@ jobs:
           command: "pip install poetry"
       - run:
           name: "Install Netlify CLI"
-          command: "npm --prefix=./netlify-cli install --dev"
+          command: "npm --prefix=./tools/netlify-cli install --dev"
       - run:
           name: "Install dependencies"
           command: "poetry install --extras=docs"
@@ -24,7 +24,7 @@ jobs:
           command: "make docs"
       - run:
           name: "Deploy to Netlify"
-          command: "npm --prefix=./netlify-cli exec -- netlify deploy --prod"
+          command: "npm --prefix=./tools/netlify-cli exec -- netlify deploy --prod"
   deploy-docs-draft:
     docker:
       - image: cimg/python:3.10-node
@@ -35,7 +35,7 @@ jobs:
           command: "pip install poetry"
       - run:
           name: "Install Netlify CLI"
-          command: "npm --prefix=./netlify-cli install --dev"
+          command: "npm --prefix=./tools/netlify-cli install --dev"
       - run:
           name: "Install dependencies"
           command: "poetry install --extras=docs"
@@ -44,7 +44,7 @@ jobs:
           command: "make docs"
       - run:
           name: "Deploy to Netlify"
-          command: "npm --prefix=./netlify-cli exec -- netlify deploy"
+          command: "npm --prefix=./tools/netlify-cli exec -- netlify deploy"
   install-sh:
     machine:
       image: ubuntu-2204:2022.07.1
