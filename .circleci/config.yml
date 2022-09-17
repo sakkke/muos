@@ -74,20 +74,25 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  deploy-docs-workflow:
-    jobs:
-      - deploy-docs
-  deploy-test-pypi-workflow:
-    jobs:
-      - deploy-test-pypi:
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^v.*/
   install-sh-workflow:
     jobs:
       - install-sh
   run-tests-workflow:
     jobs:
       - run-tests
+      - deploy-docs:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
+          requires:
+            - run-tests
+      - deploy-test-pypi:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
+          requires:
+            - run-tests
