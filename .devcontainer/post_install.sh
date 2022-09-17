@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-./scripts/install-hooks.sh
+./scripts/install_hooks.sh
 
 pipx install poetry
 

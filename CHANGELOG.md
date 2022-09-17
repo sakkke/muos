@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Convert to src layout.
 - Move `netlify-cli` to `tools` directory.
 - Move `hooks` and `install-hooks.sh` to `scripts` directory.
+- Rename files containing dashes to underscores.
 
 ### Removed
 - Remove `say-hello-workflow`.
