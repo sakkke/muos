@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a VSCode extension for Git.
 - Add `install-devdeps` task to `Makefile`.
 - Add `install-sh-workflow`.
+- Add `deploy-docs-draft` job.
 
 ### Changed
 - Make tags trigger in `deploy-test-pypi-workflow`.
