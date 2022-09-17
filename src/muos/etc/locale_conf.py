@@ -1,0 +1,2 @@
+class LocaleConf:
+    pass

@@ -6,6 +6,8 @@ from .generate_fstab import GenerateFstab
 from .bootstrap_arch_linux import BootstrapArchLinux
 from .mount_partitions import MountPartitions
 from .partition_disk import PartitionDisk
+from .process_disk import ProcessDisk
+from .process_system import ProcessSystem
 from .select_disk import SelectDisk
 from .select_keymap import SelectKeymap
 from .select_locales import SelectLocales

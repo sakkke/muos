@@ -20,6 +20,7 @@ Added
 -  Add VSCode extensions for ``*.rst``.
 -  Add ``CODE_OF_CONDUCT.rst``.
 -  Add ``CONTRIBUTING.rst``.
+-  Add draft ``silent_install.py``.
 
 Changed
 ~~~~~~~
