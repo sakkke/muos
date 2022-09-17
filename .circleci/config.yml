@@ -51,8 +51,20 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Install Poetry"
+          command: "pip install poetry"
+      - run:
+          name: "Install dependencies"
+          command: "poetry install"
+      - run:
+          name: "Create an empty 2GB file"
+          command: "fallocate --length 2G ./muosdev"
+      - run:
           name: "Find a loopback device"
-          command: "losetup --find"
+          command: "losetup --find ./muosdev"
+      - run:
+          name: "Run install.sh"
+          command: "poetry run ./install.py"
   publish-test-pypi:
     docker:
       - image: cimg/python:3.10
