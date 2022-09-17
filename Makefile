@@ -9,4 +9,4 @@ serve-docs:
 
 .PHONY: test
 test:
-	poetry run pytest --codecov
+	poetry run pytest --codecov --cov=./muos
