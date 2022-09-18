@@ -14,6 +14,7 @@ from muos.steps import (
     FormatDisk,
     FormatPartitions,
     GenerateFstab,
+    LoadKeymap,
     MountPartitions,
     PartitionDisk,
     SelectDisk,
@@ -72,6 +73,7 @@ environment = Environment(
 runner = Runner(environment, [
     Begin(),
     SelectKeymap(),
+    LoadKeymap(),
     SelectDisk(),
     SelectPacmanMirrors(),
     SelectTimeZone(),

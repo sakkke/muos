@@ -4,6 +4,7 @@ from .format_disk import FormatDisk
 from .format_partitions import FormatPartitions
 from .generate_fstab import GenerateFstab
 from .bootstrap_arch_linux import BootstrapArchLinux
+from .load_keymap import LoadKeymap
 from .mount_partitions import MountPartitions
 from .partition_disk import PartitionDisk
 from .process_disk import ProcessDisk

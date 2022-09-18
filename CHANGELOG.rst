@@ -24,6 +24,7 @@ Added
 -  Add ``sphinx.ext.napoleon``.
 -  Add ``Disk`` class.
 -  Add ``SelectStep`` class.
+-  Add ``LoadKeymap`` step.
 
 Changed
 ~~~~~~~
