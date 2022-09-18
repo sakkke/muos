@@ -27,7 +27,7 @@ Links
 Dev
 ---
 
-1. In target:
+1. On the target:
 
 .. code:: bash
 
@@ -35,20 +35,20 @@ Dev
    echo "addr=$addr"
    nc -lvp 6867 | install /dev/stdin /usr/local/bin/serve
 
-2. In host:
+2. On the host:
 
 .. code:: bash
 
    addr='<addr>'
    nc -vw 2 "$addr" 6867 < ./scripts/serve
 
-1. In target:
+1. On the target:
 
 .. code:: bash
 
    serve
 
-4. In host:
+4. On the host:
 
 .. code:: bash
 
