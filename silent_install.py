@@ -41,7 +41,6 @@ environment = Environment(
     disk=Disk(
         format=DiskFormat.GPT,
         mountpoint='/mnt',
-        name='/dev/sda',
         partitions=[
             Partition(
                 filesystem=FileSystem.EXT4,
@@ -56,6 +55,7 @@ environment = Environment(
                 type='EFI System',
             ),
         ],
+        path='/dev/sda',
     ),
     etc=Etc(
         fstab=Fstab(

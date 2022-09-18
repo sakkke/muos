@@ -22,6 +22,7 @@ Added
 -  Add ``CONTRIBUTING.rst``.
 -  Add draft ``silent_install.py``.
 -  Add ``sphinx.ext.napoleon``.
+-  Add ``Disk`` class.
 
 Changed
 ~~~~~~~
