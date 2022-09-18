@@ -27,6 +27,7 @@ Added
 -  Add ``LoadKeymap`` step.
 -  Add ``UpdateLocaleConf`` step.
 -  Increase transfer speed in ``./scripts/transfer``.
+-  Reduce time to start serving in ``./scripts/serve``.
 
 Changed
 ~~~~~~~
