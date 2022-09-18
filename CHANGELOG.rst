@@ -40,6 +40,7 @@ Changed
 -  Replace ``description`` with ``name`` in some files.
 -  Update step names.
 -  Refactor ``SelectPacmanMirrors`` class.
+-  Replace ``Step`` class with ``SelectStep`` class.
 
 Removed
 ~~~~~~~

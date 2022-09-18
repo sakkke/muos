@@ -1,11 +1,9 @@
 from ..environment import Environment
-from ..step import Step
+from ..select_step import SelectStep
 
-class SelectMainLocale(Step):
+class SelectMainLocale(SelectStep):
     name: str = 'Select a main locale'
 
     def main(self, environment: Environment) -> None:
-        super().main(environment)
-        choices = environment.locales
-        result = environment.fzf.prompt(choices, '--height=10 --layout=reverse')
-        environment.main_locale = result[0]
+        super().main(environment, environment.locales)
+        environment.main_locale = self.choices[0]
