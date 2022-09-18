@@ -39,6 +39,7 @@ Changed
 -  Update ``post_install.sh``.
 -  Replace ``description`` with ``name`` in some files.
 -  Update step names.
+-  Refactor ``SelectPacmanMirrors`` class.
 
 Removed
 ~~~~~~~
