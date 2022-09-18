@@ -31,6 +31,7 @@ Added
 -  Add a hint message in ``./scripts/serve``.
 -  Add ``Pacman`` class.
 -  Add ``create_file`` function.
+-  Add ``MultiSelectStep`` class.
 
 Changed
 ~~~~~~~
