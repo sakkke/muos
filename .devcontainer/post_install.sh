@@ -6,6 +6,6 @@ pipx install poetry
 
 poetry self add poetry-dynamic-versioning
 
-poetry install
+make install-devdeps
 
 npm --prefix ./tools/netlify-cli install
