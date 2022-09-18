@@ -5,11 +5,9 @@ from .color import Color
 class Log:
     @staticmethod
     def message(value: Any) -> None:
-        print('{}[{}] {}{}{}{}'.format(
-            Color.CYAN,
+        print('[{}] {}{}{}'.format(
             datetime.now().strftime('%H:%M:%S.%f'),
-            Color.DEFAULT,
-            Color.GREEN,
+            Color.CYAN,
             value,
             Color.DEFAULT
         ))

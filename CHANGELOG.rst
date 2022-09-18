@@ -52,6 +52,7 @@ Changed
 -  Refactor ``SelectPacmanMirrors`` class.
 -  Replace ``Step`` class with ``SelectStep`` class.
 -  Update ``fzf_options`` in ``SelectStep`` class.
+-  Change format of ``Log.message()``.
 
 Fixed
 ~~~~~
