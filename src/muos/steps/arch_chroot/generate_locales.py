@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class GenerateLocales(Step):
-    name: str = 'Generating locales...'
+    name: str = 'Generate locales'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

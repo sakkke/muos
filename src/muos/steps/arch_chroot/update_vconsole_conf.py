@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class UpdateVconsoleConf(Step):
-    name: str = 'Updating /etc/vconsole.conf...'
+    name: str = 'Update /etc/vconsole.conf'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

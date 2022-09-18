@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class UpdateLocaleGen(Step):
-    name: str = 'Updating /etc/locale.gen...'
+    name: str = 'Update /etc/locale.gen'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

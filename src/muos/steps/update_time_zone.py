@@ -3,7 +3,7 @@ from ..environment import Environment
 from ..step import Step
 
 class UpdateTimeZone(Step):
-    name: str = 'Updating a time zone...'
+    name: str = 'Update a time zone'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

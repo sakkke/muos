@@ -2,7 +2,7 @@ from ..environment import Environment
 from ..step import Step
 
 class SelectMainLocale(Step):
-    name: str = 'Selecting a main locale...'
+    name: str = 'Select a main locale'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

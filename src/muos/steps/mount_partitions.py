@@ -6,7 +6,7 @@ from ..step import Step
 from .unmount_partitions import UnmountPartitions
 
 class MountPartitions(Step):
-    name: str = 'Mounting partitions...'
+    name: str = 'Mount partitions'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

@@ -6,7 +6,7 @@ from ..environment import Environment
 from ..step import Step
 
 class BootstrapArchLinux(Step):
-    name: str = 'Bootstrapping Arch Linux...'
+    name: str = 'Bootstrap Arch Linux'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

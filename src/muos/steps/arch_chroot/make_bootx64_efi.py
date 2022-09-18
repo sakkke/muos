@@ -5,7 +5,7 @@ from ...get_efi_dir import get_efi_dir
 from ...step import Step
 
 class MakeBootx64Efi(Step):
-    name: str = 'Making <efi_dir>/EFI/boot/bootx64.efi...'
+    name: str = 'Make <efi_dir>/EFI/boot/bootx64.efi'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

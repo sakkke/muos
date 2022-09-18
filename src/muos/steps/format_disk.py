@@ -3,7 +3,7 @@ from ..environment import Environment
 from ..step import Step
 
 class FormatDisk(Step):
-    name: str = 'Formatting a disk...'
+    name: str = 'Format a disk'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

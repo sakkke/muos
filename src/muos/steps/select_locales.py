@@ -4,7 +4,7 @@ from ..get_static_dir import get_static_dir
 from ..step import Step
 
 class SelectLocales(Step):
-    name: str = 'Selecting locales...'
+    name: str = 'Select locales'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

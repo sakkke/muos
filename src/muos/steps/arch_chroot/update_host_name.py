@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class UpdateHostName(Step):
-    name: str = 'Updating /etc/hostname...'
+    name: str = 'Update /etc/hostname'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

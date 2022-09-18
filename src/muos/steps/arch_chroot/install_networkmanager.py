@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class InstallNetworkManager(Step):
-    name: str = 'Installing NetworkManager...'
+    name: str = 'Install NetworkManager'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class GenerateAdjtime(Step):
-    name: str = 'Generating /etc/adjtime...'
+    name: str = 'Generate /etc/adjtime'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

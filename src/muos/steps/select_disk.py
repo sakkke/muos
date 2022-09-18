@@ -3,7 +3,7 @@ from ..get_disks import get_disks
 from ..step import Step
 
 class SelectDisk(Step):
-    name: str = 'Selecting a disk...'
+    name: str = 'Select a disk'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
