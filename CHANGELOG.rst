@@ -32,6 +32,7 @@ Added
 -  Add ``Pacman`` class.
 -  Add ``create_file`` function.
 -  Add ``MultiSelectStep`` class.
+-  Add ``--header`` to ``SelectStep`` class.
 
 Changed
 ~~~~~~~
@@ -49,6 +50,7 @@ Changed
 -  Update step names.
 -  Refactor ``SelectPacmanMirrors`` class.
 -  Replace ``Step`` class with ``SelectStep`` class.
+-  Update ``fzf_options`` in ``SelectStep`` class.
 
 Fixed
 ~~~~~
