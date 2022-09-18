@@ -34,6 +34,7 @@ Added
 -  Add ``MultiSelectStep`` class.
 -  Add ``--header`` to ``SelectStep`` class.
 -  Add ``--preview`` to ``SelectDisk`` step.
+-  Add ``-o pipefail`` to ``./scripts/serve`` and ``./scripts/transfer``.
 
 Changed
 ~~~~~~~
