@@ -26,6 +26,7 @@ Added
 -  Add ``SelectStep`` class.
 -  Add ``LoadKeymap`` step.
 -  Add ``UpdateLocaleConf`` step.
+-  Increase transfer speed in ``./scripts/transfer``.
 
 Changed
 ~~~~~~~
