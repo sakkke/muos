@@ -23,6 +23,7 @@ Added
 -  Add draft ``silent_install.py``.
 -  Add ``sphinx.ext.napoleon``.
 -  Add ``Disk`` class.
+-  Add ``SelectStep`` class.
 
 Changed
 ~~~~~~~
