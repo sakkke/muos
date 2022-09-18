@@ -33,6 +33,7 @@ Added
 -  Add ``create_file`` function.
 -  Add ``MultiSelectStep`` class.
 -  Add ``--header`` to ``SelectStep`` class.
+-  Add ``--preview`` to ``SelectDisk`` step.
 
 Changed
 ~~~~~~~

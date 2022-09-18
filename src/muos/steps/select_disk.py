@@ -6,5 +6,6 @@ class SelectDisk(SelectStep):
     name: str = 'Select a disk'
 
     def main(self, environment: Environment) -> None:
+        self.fzf_options += ['--preview="sfdisk --list {}"', '--preview-window=down:50%']
         super().main(environment, get_disks())
         environment.disk = self.choices[0]
