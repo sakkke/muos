@@ -6,6 +6,6 @@ dest="$1"
 port="6867"
 
 cd "$(dirname "$0")/.."
-cat <(git ls-files) <(echo .git) \
+cat <(git ls-files) <(git ls-files --exclude-standard --others) <(echo .git) \
     | tar --create --files-from=- --group=0 --owner=0 --to-stdout \
     | nc -vw 2 "$dest" "$port"
