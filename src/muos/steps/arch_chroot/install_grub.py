@@ -1,6 +1,7 @@
 from ...command import Command
 from ...environment import Environment
 from ...get_efi_dir import get_efi_dir
+from ...pacman import Pacman
 from ...step import Step
 
 class InstallGrub(Step):
@@ -8,11 +9,8 @@ class InstallGrub(Step):
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
-        packages = [
-            'efibootmgr',
-            'grub',
-        ]
-        Command.run(['arch-chroot', environment.mnt, 'pacman', '--noconfirm', '--sync'] + packages)
+        pacman = Pacman()
+        pacman.add(environment.mnt, ['efibootmgr', 'grub'])
         efi_dir = get_efi_dir(environment)
         Command.run([
             'arch-chroot', environment.mnt, 'grub-install',

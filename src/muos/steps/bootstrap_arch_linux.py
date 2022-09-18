@@ -1,8 +1,8 @@
 from pathlib import Path
 from shutil import copy
 from tempfile import mkdtemp
-from ..command import Command
 from ..environment import Environment
+from ..pacman import Pacman
 from ..step import Step
 
 class BootstrapArchLinux(Step):
@@ -28,4 +28,5 @@ class BootstrapArchLinux(Step):
         replaced = content.replace('/etc/pacman.d/mirrorlist', str(mirrorlist))
         pacman_conf.write_text(replaced)
 
-        Command.run(['pacstrap', '-C', pacman_conf, environment.mnt] + environment.pacstrap_packages)
+        pacman = Pacman()
+        pacman.bootstrap(environment.mnt, environment.pacstrap_packages, options=['-C', pacman_conf])

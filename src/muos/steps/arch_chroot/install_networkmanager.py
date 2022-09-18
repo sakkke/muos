@@ -1,5 +1,5 @@
-from ...command import Command
 from ...environment import Environment
+from ...pacman import Pacman
 from ...step import Step
 
 class InstallNetworkManager(Step):
@@ -7,8 +7,6 @@ class InstallNetworkManager(Step):
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
-        packages = [
-            'networkmanager',
-        ]
-        Command.run(['arch-chroot', environment.mnt, 'pacman', '--noconfirm', '--sync'] + packages)
+        pacman = Pacman()
+        pacman.add(environment.mnt, ['networkmanager'])
         environment.systemd_services += ['NetworkManager.service']

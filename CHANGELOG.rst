@@ -29,6 +29,7 @@ Added
 -  Increase transfer speed in ``./scripts/transfer``.
 -  Reduce time to start serving in ``./scripts/serve``.
 -  Add a hint message in ``./scripts/serve``.
+-  Add ``Pacman`` class.
 
 Changed
 ~~~~~~~
