@@ -1,5 +1,6 @@
 from pathlib import Path
 from ...environment import Environment
+from ...lib import create_file
 from ...step import Step
 
 class UpdateHostName(Step):
@@ -7,5 +8,6 @@ class UpdateHostName(Step):
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
-        hostname = Path(environment.mnt) / 'etc' / 'hostname'
-        hostname.write_text(environment.host_name)
+        create_file(Path(environment.mnt) / 'etc' / 'hostname', [
+            environment.host_name,
+        ])

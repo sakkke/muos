@@ -30,6 +30,7 @@ Added
 -  Reduce time to start serving in ``./scripts/serve``.
 -  Add a hint message in ``./scripts/serve``.
 -  Add ``Pacman`` class.
+-  Add ``create_file`` function.
 
 Changed
 ~~~~~~~

@@ -1,5 +1,6 @@
 from pathlib import Path
 from ...environment import Environment
+from ...lib import create_file
 from ...step import Step
 
 class UpdateVconsoleConf(Step):
@@ -7,7 +8,6 @@ class UpdateVconsoleConf(Step):
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
-        vconsole_conf = Path(environment.mnt) / 'etc' / 'vconsole.conf'
-        vconsole_conf.write_text('\n'.join([
+        create_file(Path(environment.mnt) / 'etc' / 'vconsole.conf', [
             'KEYMAP={}'.format(environment.keymap),
-        ]))
+        ])
