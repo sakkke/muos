@@ -32,7 +32,7 @@ Changed
 -  Move ``netlify-cli`` to ``tools`` directory.
 -  Move ``hooks`` and ``install-hooks.sh`` to ``scripts`` directory.
 -  Rename files containing dashes to underscores.
--  Convert Markdown to reStructedText
+-  Convert Markdown to reStructedText.
 -  Update ``post_install.sh``.
 
 Removed
