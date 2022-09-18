@@ -25,6 +25,7 @@ Added
 -  Add ``Disk`` class.
 -  Add ``SelectStep`` class.
 -  Add ``LoadKeymap`` step.
+-  Add ``UpdateLocaleConf`` step.
 
 Changed
 ~~~~~~~
@@ -42,6 +43,11 @@ Changed
 -  Update step names.
 -  Refactor ``SelectPacmanMirrors`` class.
 -  Replace ``Step`` class with ``SelectStep`` class.
+
+Fixed
+~~~~~
+
+- Fix incorrect ``vconsole.conf``.
 
 Removed
 ~~~~~~~

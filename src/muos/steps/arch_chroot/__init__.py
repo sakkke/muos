@@ -5,6 +5,7 @@ from .install_grub import InstallGrub
 from .install_networkmanager import InstallNetworkManager
 from .make_bootx64_efi import MakeBootx64Efi
 from .update_host_name import UpdateHostName
+from .update_locale_conf import UpdateLocaleConf
 from .update_locale_gen import UpdateLocaleGen
 from .update_passwords import UpdatePasswords
 from .update_vconsole_conf import UpdateVconsoleConf
