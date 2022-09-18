@@ -11,6 +11,8 @@ trap 'rm --force --recursive "$tempdir"' EXIT
 
 addr="$(ip route get 1.2.3.4 | head --lines=1 | awk '{print $7}')"
 echo "addr=$addr"
+echo "hint: Please run the following command on the host:"
+echo "    ./scripts/transfer $addr"
 
 cd "$tempdir"
 nc -lvp "$port" | tar --extract --file=- --verbose
