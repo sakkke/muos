@@ -4,7 +4,7 @@ from ..environment import Environment
 from ..step import Step
 
 class GenerateFstab(Step):
-    description: str = 'Generating /etc/fstab...'
+    name: str = 'Generating /etc/fstab...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

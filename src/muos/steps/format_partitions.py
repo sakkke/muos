@@ -4,7 +4,7 @@ from ..get_nth_partition import get_nth_partition
 from ..step import Step
 
 class FormatPartitions(Step):
-    description: str = 'Formatting partitions...'
+    name: str = 'Formatting partitions...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class EnableSystemdServices(Step):
-    description: str = 'Enabling systemd services...'
+    name: str = 'Enabling systemd services...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

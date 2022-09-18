@@ -3,7 +3,7 @@ from ..environment import Environment
 from ..step import Step
 
 class SynchronizeNtp(Step):
-    description: str = 'Synchronizing system clock from NTP server...'
+    name: str = 'Synchronizing system clock from NTP server...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

@@ -4,7 +4,7 @@ from ..get_static_dir import get_static_dir
 from ..step import Step
 
 class SelectTimeZone(Step):
-    description: str = 'Selecting a time zone...'
+    name: str = 'Selecting a time zone...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

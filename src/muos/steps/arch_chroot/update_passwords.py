@@ -3,7 +3,7 @@ from ...environment import Environment
 from ...step import Step
 
 class UpdatePasswords(Step):
-    description: str = 'Updating user passwords...'
+    name: str = 'Updating user passwords...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

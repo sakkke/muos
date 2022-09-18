@@ -12,7 +12,7 @@ class Runner:
         self.steps = steps
 
     def run(self) -> None:
-        Log.message(self.environment.description)
+        Log.message(self.environment.name)
 
         for step in self.steps:
             step.main(self.environment)

@@ -42,7 +42,7 @@ from muos.steps.arch_chroot import (
 environment = Environment(
     bootloader_id='GRUB',
     bootx64_efi='<efi_dir>/EFI/<bootloader_id>/grubx64.efi',
-    description='Installing muOS...',
+    name='Installing muOS...',
     disk_format=DiskFormat.GPT,
     file_systems=[
         FileSystem.FAT32,

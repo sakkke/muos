@@ -35,6 +35,7 @@ Changed
 -  Rename files containing dashes to underscores.
 -  Convert Markdown to reStructedText.
 -  Update ``post_install.sh``.
+-  Replace ``description`` with ``name`` in some files.
 
 Removed
 ~~~~~~~

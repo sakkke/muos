@@ -3,7 +3,7 @@ from ..step import Step
 from .end import End
 
 class Begin(Step):
-    description: str = 'Beginning of the runner...'
+    name: str = 'Beginning of the runner...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

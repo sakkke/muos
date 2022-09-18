@@ -3,7 +3,7 @@ from ..environment import Environment
 from ..step import Step
 
 class UnmountPartitions(Step):
-    description: str = 'Unmounting partitions...'
+    name: str = 'Unmounting partitions...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

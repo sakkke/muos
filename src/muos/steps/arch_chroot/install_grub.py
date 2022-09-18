@@ -4,7 +4,7 @@ from ...get_efi_dir import get_efi_dir
 from ...step import Step
 
 class InstallGrub(Step):
-    description: str = 'Installing GNU GRUB...'
+    name: str = 'Installing GNU GRUB...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)

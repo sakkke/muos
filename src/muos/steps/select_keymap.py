@@ -5,7 +5,7 @@ from ..get_static_dir import get_static_dir
 from ..step import Step
 
 class SelectKeymap(Step):
-    description: str = 'Selecting a keymap...'
+    name: str = 'Selecting a keymap...'
 
     def main(self, environment: Environment) -> None:
         super().main(environment)
