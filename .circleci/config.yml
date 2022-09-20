@@ -65,6 +65,19 @@ jobs:
       - run:
           name: "Run install.sh"
           command: "poetry run ./install.py"
+  make-archiso:
+    machine:
+      image: ubuntu-2204:2022.07.1
+    steps:
+      - run:
+          name: "Download the bootstrap tarball"
+          command: "curl https://geo.mirror.pkgbuild.com/iso/2022.09.03/archlinux-bootstrap-x86_64.tar.gz | sudo tar --directory=/tmp --extract --file=- --gzip --numeric-owner"
+      - run:
+          name: "Initialize pacman keyring"
+          command: "sudo /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64 pacman-key --init"
+      - run:
+          name: "Populate pacman keyring"
+          command: "sudo /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64 pacman-key --populate"
   publish-test-pypi:
     docker:
       - image: cimg/python:3.10
@@ -109,6 +122,9 @@ workflows:
   install-sh-workflow:
     jobs:
       - install-sh
+  make-archiso-workflow:
+    jobs:
+      - make-archiso
   run-tests-workflow:
     jobs:
       - run-tests
