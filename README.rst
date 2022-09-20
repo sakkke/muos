@@ -42,7 +42,7 @@ Dev
    addr='<addr>'
    nc -vw 2 "$addr" 6867 < ./scripts/serve
 
-1. On the target:
+3. On the target:
 
 .. code:: bash
 
