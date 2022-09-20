@@ -54,7 +54,7 @@ Changed
 -  Replace ``Step`` class with ``SelectStep`` class.
 -  Update ``fzf_options`` in ``SelectStep`` class.
 -  Change format of ``Log.message()``.
--  update: update environment name in ``install.sh``.
+-  Update environment name in ``install.sh``.
 
 Fixed
 ~~~~~
