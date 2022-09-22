@@ -4,6 +4,14 @@ set -eo pipefail
 
 port="6867"
 
+onecat() {
+    while read -r line; do
+        printf '\e[K\r%s' "$line" | head --bytes="$(tput cols)"
+    done
+
+    printf '\n'
+}
+
 pacman --needed --noconfirm --sync --refresh git python-pip
 
 tempdir="$(mktemp --directory)"
@@ -15,7 +23,7 @@ echo "hint: Please run the following command on the host:"
 echo "    ./scripts/transfer $addr"
 
 cd "$tempdir"
-nc -lvp "$port" | tar --extract --file=- --verbose
+nc -lvp "$port" | tar --extract --file=- --verbose | onecat
 pip install .
 ./install.py
 lsblk
