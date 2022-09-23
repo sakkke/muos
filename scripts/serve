@@ -12,7 +12,7 @@ onecat() {
     printf '\n'
 }
 
-pacman --needed --noconfirm --sync --refresh git python-pip
+pacman --needed --noconfirm --noprogressbar --sync --refresh git python-pip
 
 tempdir="$(mktemp --directory)"
 trap 'rm --force --recursive "$tempdir"' EXIT
