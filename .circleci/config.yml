@@ -78,6 +78,26 @@ jobs:
       - run:
           name: "Populate pacman keyring"
           command: "sudo /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64 pacman-key --populate"
+      - run:
+          name: "Update /etc/pacman.d/mirrorlist"
+          command: "echo 'Server = https://geo.mirror.pkgbuild.com/$repo/os/$arch' | sudo tee /tmp/root.x86_64/etc/pacman.d/mirrorlist"
+      - run:
+          name: "Fix /etc/pacman.conf"
+          command: "sudo sed --in-place 's/^\\(CheckSpace\\)$/#\\1/' /tmp/root.x86_64/etc/pacman.conf"
+      - run:
+          name: "Synchronize pacman package databases"
+          command: "sudo /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64 pacman --color auto --noprogressbar --refresh --sync"
+      - run:
+          name: "Install system dependencies"
+          command: "sudo /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64 pacman --color auto --noconfirm --noprogressbar --sync archiso"
+      - run:
+          name: "Setup working directory"
+          command: "sudo cp --no-target-directory --recursive --verbose projects/archiso/configs/baseline /tmp/root.x86_64/work"
+      - run:
+          name: "Make custom Archiso"
+          command: "sudo /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64 bash -c 'cd /work && mkarchiso -v .'"
+      - store_artifacts:
+          path: /tmp/root.x86_64/work/out
   publish-test-pypi:
     docker:
       - image: cimg/python:3.10
