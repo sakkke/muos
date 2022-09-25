@@ -137,16 +137,26 @@ jobs:
           name: "Run tests"
           command: "make test"
 
+parameters:
+    run-schedule:
+      type: boolean
+      default: false
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   install-sh-workflow:
+    when:
+      not: << pipeline.parameters.run-schedule >>
     jobs:
       - install-sh
   make-archiso-workflow:
+    when: << pipeline.parameters.run-schedule >>
     jobs:
       - make-archiso
   run-tests-workflow:
+    when:
+      not: << pipeline.parameters.run-schedule >>
     jobs:
       - run-tests
       - deploy-docs-draft:
