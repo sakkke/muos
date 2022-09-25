@@ -69,6 +69,7 @@ jobs:
     machine:
       image: ubuntu-2204:2022.07.1
     steps:
+      - checkout
       - run:
           name: "Download the bootstrap tarball"
           command: "curl --dump-header /dev/stderr --silent https://geo.mirror.pkgbuild.com/iso/2022.09.03/archlinux-bootstrap-x86_64.tar.gz | sudo tar --directory=/tmp --extract --file=- --gzip --numeric-owner --verbose"
