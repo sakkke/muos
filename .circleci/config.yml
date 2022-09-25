@@ -61,7 +61,7 @@ jobs:
           command: "fallocate --length 2G ./muosdev"
       - run:
           name: "Find a loopback device"
-          command: "losetup --find ./muosdev"
+          command: "sudo losetup --find ./muosdev"
       - run:
           name: "Run install.sh"
           command: "poetry run ./install.py"
