@@ -24,6 +24,11 @@ Links
 -  `Documents <https://muos.netlify.app/>`__
 -  `LICENSE <./LICENSE>`__
 
+Download
+--------
+
+You can download the custom Archiso in CircleCI artifacts of `make-archiso-workflow <https://app.circleci.com/insights/github/sakkke/muos/workflows/make-archiso-workflow/overview?branch=main>`__.
+
 Dev
 ---
 

@@ -38,6 +38,7 @@ Added
 -  Add ``make-archiso`` workflow.
 -  Add ``baseline`` archiso config.
 -  Add ``releng`` archiso config.
+-  Add heading "Download" to ``README.md``.
 
 Changed
 ~~~~~~~
