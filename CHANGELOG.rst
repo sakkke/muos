@@ -36,6 +36,7 @@ Added
 -  Add ``--preview`` to ``SelectDisk`` step.
 -  Add ``-o pipefail`` to ``./scripts/serve`` and ``./scripts/transfer``.
 -  Add ``make-archiso`` workflow.
+-  Add ``baseline`` archiso config.
 
 Changed
 ~~~~~~~
