@@ -64,7 +64,7 @@ jobs:
           command: "sudo losetup --find ./muosdev"
       - run:
           name: "Run install.sh"
-          command: "poetry run ./install.py"
+          command: "poetry run ./silent_install.py"
   make-archiso:
     machine:
       image: ubuntu-2204:2022.07.1
