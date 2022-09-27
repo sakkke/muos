@@ -39,6 +39,7 @@ Added
 -  Add ``baseline`` archiso config.
 -  Add ``releng`` archiso config.
 -  Add heading "Download" to ``README.md``.
+-  Add heading "Goals" to ``README.md``.
 
 Changed
 ~~~~~~~
