@@ -1,56 +1,19 @@
 #!/usr/bin/env python3
 
-from muos import (
-    DiskFormat,
-    Environment,
-    FileSystem,
-    FstabTag,
-    Runner,
-)
+import muos
+import muos.steps as steps
+import muos.steps.arch_chroot as arch_chroot
 
-from muos.steps import (
-    Begin,
-    BootstrapArchLinux,
-    FormatDisk,
-    FormatPartitions,
-    GenerateFstab,
-    LoadKeymap,
-    MountPartitions,
-    PartitionDisk,
-    SelectDisk,
-    SelectKeymap,
-    SelectLocales,
-    SelectMainLocale,
-    SelectPacmanMirrors,
-    SelectTimeZone,
-    SynchronizeNtp,
-    UpdateTimeZone,
-)
-
-from muos.steps.arch_chroot import (
-    EnableSystemdServices,
-    GenerateAdjtime,
-    GenerateLocales,
-    InstallGrub,
-    InstallNetworkManager,
-    MakeBootx64Efi,
-    UpdateHostName,
-    UpdateLocaleConf,
-    UpdateLocaleGen,
-    UpdatePasswords,
-    UpdateVconsoleConf,
-)
-
-environment = Environment(
+environment = muos.Environment(
     bootloader_id='GRUB',
     bootx64_efi='<efi_dir>/EFI/<bootloader_id>/grubx64.efi',
     name='Install muOS',
-    disk_format=DiskFormat.GPT,
+    disk_format=muos.DiskFormat.GPT,
     file_systems=[
-        FileSystem.FAT32,
-        FileSystem.EXT4,
+        muos.FileSystem.FAT32,
+        muos.FileSystem.EXT4,
     ],
-    fstab_tag=FstabTag.UUID,
+    fstab_tag=muos.FstabTag.UUID,
     host_name='muos',
     mnt = '/mnt',
     mount_points=[
@@ -71,34 +34,34 @@ environment = Environment(
     ],
 )
 
-runner = Runner(environment, [
-    Begin(),
-    SelectKeymap(),
-    LoadKeymap(),
-    SelectDisk(),
-    SelectPacmanMirrors(),
-    SelectTimeZone(),
-    SelectLocales(),
-    SelectMainLocale(),
-    SynchronizeNtp(),
-    FormatDisk(),
-    PartitionDisk(),
-    FormatPartitions(),
-    MountPartitions(),
-    BootstrapArchLinux(),
-    GenerateFstab(),
-    UpdateTimeZone(),
-    GenerateAdjtime(),
-    UpdateLocaleGen(),
-    GenerateLocales(),
-    UpdateLocaleConf(),
-    UpdateVconsoleConf(),
-    UpdateHostName(),
-    UpdatePasswords(),
-    InstallGrub(),
-    MakeBootx64Efi(),
-    InstallNetworkManager(),
-    EnableSystemdServices(),
+runner = muos.Runner(environment, [
+    steps.Begin(),
+    steps.SelectKeymap(),
+    steps.LoadKeymap(),
+    steps.SelectDisk(),
+    steps.SelectPacmanMirrors(),
+    steps.SelectTimeZone(),
+    steps.SelectLocales(),
+    steps.SelectMainLocale(),
+    steps.SynchronizeNtp(),
+    steps.FormatDisk(),
+    steps.PartitionDisk(),
+    steps.FormatPartitions(),
+    steps.MountPartitions(),
+    steps.BootstrapArchLinux(),
+    steps.GenerateFstab(),
+    steps.UpdateTimeZone(),
+    arch_chroot.GenerateAdjtime(),
+    arch_chroot.UpdateLocaleGen(),
+    arch_chroot.GenerateLocales(),
+    arch_chroot.UpdateLocaleConf(),
+    arch_chroot.UpdateVconsoleConf(),
+    arch_chroot.UpdateHostName(),
+    arch_chroot.UpdatePasswords(),
+    arch_chroot.InstallGrub(),
+    arch_chroot.MakeBootx64Efi(),
+    arch_chroot.InstallNetworkManager(),
+    arch_chroot.EnableSystemdServices(),
 ])
 
 runner.run()

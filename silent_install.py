@@ -1,55 +1,25 @@
-from muos import (
-    Boot,
-    Disk,
-    DiskFormat,
-    Environment,
-    FileSystem,
-    FstabTag,
-    Partition,
-    Runner,
-    System,
-    User,
-)
+import muos
+import muos.etc as etc
+import muos.steps as steps
+import muos.steps.arch_chroot as arch_chroot
 
-from muos.etc import (
-    Etc,
-    Fstab,
-    LocaleConf,
-    VconsoleConf,
-)
-
-from muos.steps import (
-    Begin,
-    SynchronizeNtp,
-    ProcessDisk,
-    BootstrapArchLinux,
-    ProcessSystem,
-)
-
-from muos.steps.arch_chroot import (
-    InstallGrub,
-    MakeBootx64Efi,
-    InstallNetworkManager,
-    EnableSystemdServices,
-)
-
-environment = Environment(
-    boot=Boot(
+environment = muos.Environment(
+    boot=muos.Boot(
         efi='grubx64.efi',
         id='grub',
     ),
-    disk=Disk(
-        format=DiskFormat.GPT,
+    disk=muos.Disk(
+        format=muos.DiskFormat.GPT,
         mountpoint='/mnt',
         partitions=[
-            Partition(
-                filesystem=FileSystem.EXT4,
+            muos.Partition(
+                filesystem=muos.FileSystem.EXT4,
                 mountpoint='/',
                 size='100%',
                 type='Linux root (x86-64)',
             ),
-            Partition(
-                filesystem=FileSystem.FAT32,
+            muos.Partition(
+                filesystem=muos.FileSystem.FAT32,
                 mountpoint='/boot',
                 size='300MiB',
                 type='EFI System',
@@ -57,15 +27,15 @@ environment = Environment(
         ],
         path='/dev/sda',
     ),
-    etc=Etc(
-        fstab=Fstab(
-            tag=FstabTag.UUID,
+    etc=etc.Etc(
+        fstab=etc.Fstab(
+            tag=muos.FstabTag.UUID,
         ),
         hostname='muos',
-        locale_conf=LocaleConf(
+        locale_conf=etc.LocaleConf(
             lang='en_US.UTF-8',
         ),
-        vconsole_conf=VconsoleConf(
+        vconsole_conf=etc.VconsoleConf(
             keymap='us',
         ),
     ),
@@ -78,32 +48,32 @@ environment = Environment(
         'linux',
         'linux-firmware',
     ],
-    system=System(
+    system=muos.System(
         locales=[
             'en_US.UTF-8 UTF-8',
         ],
         timezone='UTC',
     ),
     users=[
-        User(
+        muos.User(
             name='root',
             password='toor',
         ),
     ],
 )
 
-runner = Runner(
+runner = muos.Runner(
     environment=environment,
     steps=[
-        Begin(),
-        SynchronizeNtp(),
-        ProcessDisk(),
-        BootstrapArchLinux(),
-        ProcessSystem(),
-        InstallGrub(),
-        MakeBootx64Efi(),
-        InstallNetworkManager(),
-        EnableSystemdServices(),
+        steps.Begin(),
+        steps.SynchronizeNtp(),
+        steps.ProcessDisk(),
+        steps.BootstrapArchLinux(),
+        steps.ProcessSystem(),
+        arch_chroot.InstallGrub(),
+        arch_chroot.MakeBootx64Efi(),
+        arch_chroot.InstallNetworkManager(),
+        arch_chroot.EnableSystemdServices(),
     ],
 )
 
