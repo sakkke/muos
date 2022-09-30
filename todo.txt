@@ -1,4 +1,4 @@
-(A) 2022-09-30 rename @archiso to @muiso
-(B) 2022-09-30 @python-muos python package
-(B) 2022-09-30 @python-muos pacman package
-(B) 2022-09-30 include @pyhon-muos into @muiso
+(A) 2022-09-30 rename +archiso to +muiso
+(B) 2022-09-30 +python-muos python package
+(B) 2022-09-30 +python-muos pacman package
+(B) 2022-09-30 include +pyhon-muos into +muiso
