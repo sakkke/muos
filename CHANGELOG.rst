@@ -103,6 +103,7 @@ Added
 -  Add Codecov status badge to ``README.md``.
 -  Add ``deploy-test-pypi-workflow``.
 -  Add project ``todo.txt``.
+-  Add a VSCode extension for ``todo.txt``.
 
 .. _changed-1:
 

@@ -28,7 +28,8 @@
 				"ms-azuretools.vscode-docker",
 				"eamodio.gitlens",
 				"lextudio.restructuredtext",
-				"trond-snekvik.simple-rst"
+				"trond-snekvik.simple-rst",
+				"davraamides.todotxt-mode"
 			]
 		}
 	}
