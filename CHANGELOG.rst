@@ -102,6 +102,7 @@ Added
 -  Add ``GitPython`` as a development dependency.
 -  Add Codecov status badge to ``README.md``.
 -  Add ``deploy-test-pypi-workflow``.
+-  Add project ``todo.txt``.
 
 .. _changed-1:
 

@@ -31,6 +31,7 @@ Links
 -  `CONTRIBUTING.rst <./CONTRIBUTING.rst>`__
 -  `Documents <https://muos.netlify.app/>`__
 -  `LICENSE <./LICENSE>`__
+-  `todo.txt <./todo.txt>`__
 
 Download
 --------
