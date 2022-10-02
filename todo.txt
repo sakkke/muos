@@ -1,4 +1,11 @@
 (A) 2022-09-30 rename +archiso to +muiso
+(A) 2022-10-02 add multiple projects support
 (B) 2022-09-30 create +python-muos python package
 (B) 2022-09-30 create +python-muos pacman package
 (B) 2022-09-30 include +pyhon-muos into +muiso
+(B) 2022-10-02 add +muos-devserver project
+(C) 2022-10-02 add +muos-raspberrypi project
+(C) 2022-10-02 add +muos-shells project
+(C) 2022-10-02 add +muos-termux project
+(C) 2022-10-02 add +muos-wsl2 project
+(D) 2022-10-02 add +muos-android project
