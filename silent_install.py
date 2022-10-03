@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import muos
 import muos.etc as etc
 import muos.steps as steps
