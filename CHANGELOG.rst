@@ -60,6 +60,7 @@ Changed
 -  Update ``fzf_options`` in ``SelectStep`` class.
 -  Change format of ``Log.message()``.
 -  Update environment name in ``install.sh``.
+-  Update ``.git/hooks/pre-commit``.
 
 Fixed
 ~~~~~
