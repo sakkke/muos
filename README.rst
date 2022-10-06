@@ -36,7 +36,7 @@ Links
 Download
 --------
 
-You can download the custom Archiso in CircleCI artifacts of `make-archiso-workflow <https://app.circleci.com/insights/github/sakkke/muos/workflows/make-archiso-workflow/overview?branch=main>`__.
+You can download the custom Archiso in CircleCI artifacts of `make-archiso-workflow <https://app.circleci.com/pipelines/github/sakkke/muos>`__.
 
 Dev
 ---
