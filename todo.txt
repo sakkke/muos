@@ -13,5 +13,5 @@
 (D) 2022-10-02 add +muos-website project
 (E) 2022-10-02 add +muos-android project
 (E) 2022-10-02 add +mupac project
-(E) 2022-10-02 add +muos-pacman-repos project
-(E) 2022-10-02 add +mupac-repos project
+(E) 2022-10-02 add +muos-pacman-repo project
+(E) 2022-10-02 add +mupac-repo project
