@@ -6,12 +6,15 @@
 (C) 2022-09-30 create +python-muos python package
 (C) 2022-09-30 create +python-muos pacman package
 (C) 2022-09-30 include +pyhon-muos into +muiso
-(D) 2022-10-02 add +muos-raspberrypi project
-(D) 2022-10-02 add +muos-shells project
-(D) 2022-10-02 add +muos-termux project
-(D) 2022-10-02 add +muos-wsl2 project
 (D) 2022-10-02 add +muos-website project
-(E) 2022-10-02 add +muos-android project
-(E) 2022-10-02 add +mupac project
-(E) 2022-10-02 add +muos-pacman-repo project
-(E) 2022-10-02 add +mupac-repo project
+(D) 2022-10-11 add +muos-rootfs project
+(E) 2022-10-02 add +muos-raspberrypi project
+(E) 2022-10-02 add +muos-shells project
+(E) 2022-10-02 add +muos-termux project
+(E) 2022-10-02 add +muos-wsl2 project
+(E) 2022-10-11 add +muos-docker project
+(E) 2022-10-11 add +muos-proot project
+(F) 2022-10-02 add +muos-android project
+(F) 2022-10-02 add +mupac project
+(F) 2022-10-02 add +muos-pacman-repo project
+(F) 2022-10-02 add +mupac-repo project
