@@ -1,5 +1,8 @@
 (A) 2022-09-30 rename +archiso to +muiso
 (A) 2022-10-02 add multiple projects support
+(A) 2022-10-13 add @rich library
+(A) 2022-10-13 add @black formatter
+(A) 2022-10-13 add @cyclonedx-bom SBOM generator
 (B) 2022-10-02 add +mufy project
 (B) 2022-10-02 add +muos-devserver project
 (B) 2022-10-09 add +muos-devclient project
