@@ -18,10 +18,12 @@ muOS
 Goals
 -----
 
--  Programmable System Installation (PSI)
--  Fastest Automatic System Installation (FASI)
--  Fastest System Restoration (FSR)
--  Continuable System
+-  Sustainable Operating System Architecture
+
+   -  Programmable System Installation (PSI)
+   -  Fastest Automatic System Installation (FASI)
+   -  Fastest System Restoration (FSR)
+   -  Continuable System
 
 Links
 -----
